@@ -1,0 +1,533 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+Homepage - APREA
+{% endblock title %}
+
+
+{% block content %}
+ 
+
+ 
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"> 
+
+
+
+<div class="container" style="padding-top: 20px;padding-bottom: 30px;">
+    <div class="row py-5 my-5 text-center">
+        <h2 class="text-light">Group Registration Form</h2>
+    </div>
+</div>
+</div>
+
+
+<style>
+.avatar-upload {
+position: relative;
+max-width: 115px;
+margin: 0px ;  
+} 
+
+  .avatar-upload .avatar-edit {
+position: absolute;
+right: 12px;
+z-index: 1;
+top: 10px;
+}
+
+.avatar-upload .avatar-edit input {
+display: none;
+}    
+
+.avatar-upload .avatar-edit input+label {
+display: inline-block;
+width: 38px;
+height: 38px;
+margin-bottom: 0;
+border-radius: 100%;
+background: #FFFFFF;
+border: 1px solid transparent;
+box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
+cursor: pointer;
+font-weight: normal;
+transition: all 0.2s ease-in-out;
+}
+
+.avatar-upload .avatar-edit input+label:hover {
+background: #f1f1f1;
+border-color: #d6d6d6;
+}
+
+.avatar-upload .avatar-edit input+label:after {
+content: "\f040";
+font-family: 'FontAwesome';
+font-size: 12px;
+color: #757575;
+position: absolute;
+top: 10px;
+left: 0;
+right: 0;
+text-align: center;
+margin: auto;
+}
+
+
+.avatar-uploady .avatar-previewy {
+width: 92px;
+height: 92px;
+position: relative;
+border-radius: 100%;
+border: 6px solid #F8F8F8;
+box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+}
+
+.avatar-uploadx .avatar-previewx {
+width: 92px;
+height: 92px;
+position: relative;
+border-radius: 10%;
+border: 6px solid #F8F8F8;
+box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+}
+.avatar-upload .avatar-preview>div {
+width: 100%;
+height: 100%;
+border-radius: 100%;
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center;
+}
+.avatar-upload-box {
+   position: relative;
+   max-width: 260px;
+  }
+
+ .avatar-upload-box .avatar-edit-box {
+   position: absolute;
+   right: 12px;
+   z-index: 1;
+   top: 0px;
+  }
+
+ .avatar-upload-box .avatar-edit-box input {
+   display: none;
+ }
+
+ .avatar-upload-box .avatar-edit-box input+label {
+   display: inline-block;
+   width: 32px;
+   height: 32px;
+   margin-bottom: 0;
+   border-radius: 2%;
+   background: #FFFFFF;
+   border: 1px solid transparent;
+   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
+   cursor: pointer;
+   font-weight: normal;
+   transition: all 0.2s ease-in-out;
+ }
+
+ .avatar-upload-box .avatar-edit-box input+label:hover {
+   background: #f1f1f1;
+   border-color: #d6d6d6;
+ }
+
+ .avatar-upload-box .avatar-edit-box input+label:after {
+   content: "\f040";
+   font-family: 'FontAwesome';
+   font-size: 15px;
+   color: #757575;
+   position: absolute;
+   top: 10px;
+   left: 0;
+   right: 0;
+   text-align: center;
+   margin: auto;
+ }
+
+ .avatar-upload-box .avatar-preview-box {
+   width: 242px;
+   height: 132px;
+   position: relative;
+   border-radius: 2%;
+   border: 3px solid #F8F8F8;
+   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+ }
+
+ .avatar-upload-box .avatar-preview-box>div {
+   width: 100%;
+   height: 100%;
+   border-radius: 2%;
+   background-size: cover;
+    background-repeat: no-repeat;
+   background-position: center;
+ }
+
+ @media screen and (max-width: 600px) {
+    .avatar-upload-box .avatar-preview-box {
+   width: 242px;
+   height: 70px;
+   position: relative;
+   border-radius: 2%;
+   border: 3px solid #F8F8F8;
+   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+ }
+}
+
+</style>
+<div class="container">
+    <div class="row p-5">
+        <div class="col-md-4">
+            <h2>
+                Get  Registered
+            </h3>
+        </div>
+        <div class="col-md-8">
+            <p>
+                The brokerage community is an integral part of the real estate industry. The industry's expansion and development over the last several decades have been largely driven by a handful of powerful developers. 
+    
+            </p>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="container">
+    <form action=" " method="post">
+      {% csrf_token %}
+        <div class="row p-5">
+        <div class="col-md-4">
+          
+          <div class="container">
+            <div class="avatar-upload  avatar-uploady">
+              <div style="z-index: 3; " class="avatar-edit">
+                
+                  <input type='file' id="imageUpload" accept=".png, .jpg, .jpeg"  />
+                   
+                  <label for="imageUpload"></label>
+              </div>
+              <div class="avatar-preview avatar-previewy">
+                  <div id="imagePreview" style="background-image: url(  './../../../static/assets/img/avatar-bg.png' );">
+                  </div>
+              </div>
+          </div>
+          <label for="">Upload SECP Certificate</label>
+
+            <div class="avatar-upload-box">
+              <div style="z-index: 3;   " class="avatar-edit-box">
+                  <input type='file' id="imageUpload-box" accept=".png, .jpg, .jpeg" />
+                  <label for="imageUpload-box"></label>
+              </div>
+              <div sty class="avatar-preview-box ">
+                  <div id="imagePreview-box" style="background-image: url( './../../../static/assets/img/avatar-bg2.png' );">
+                  </div>
+              </div>
+            </div>
+            
+          </div>
+         
+        
+          
+ 
+        </div>
+        <div class="col-md-8">
+          <div class="row">
+            <div class="col-md-6 p-2">
+              
+             <p>
+                <b>Organization Name</b>
+             </p>
+              <input type="text" name="Organization_name" class="form-control" placeholder="i.e. All Pakistan Real Estate Associations">
+            </div>
+            <div class="col-md-6"></div>
+              <div class="col-md-4 "><div class="form-outline flex-fill mb-0 mr-3">
+                  <label for=""> <b> Province</b> </label>
+                    <input type="text" class="form-control" name="province" placeholder="Punjab ">
+              </div>
+            </div>
+        <div class="col-md-4"> <div class="form-outline flex-fill mb-0 mr-3">
+          <label for=""> <b>City </b> </label>
+          <input type="text" class="form-control" name='City' placeholder="Lahore">
+        </div>
+        </div>
+        <div class="col-md-4"> <div class="form-outline flex-fill mb-0 mr-3">
+          <label for=""> <b>Area</b> </label>
+          <input type="text" class="form-control" name="area" placeholder="Bahria Town"></div>
+        </div>
+          </div>
+            <div class="row">
+              <div class="col-md-6 py-3 "> 
+                <div   class=" p-"> <b>Registered With</b> </div>
+
+                <span class=" p-3">
+                <input class="form-check-input " type="radio" name="Registered_With" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+                SECP   </label>
+              </span>
+              <span class="p-3"  >
+                <input class="form-check-input " type="radio" name="Registered_With" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+                  Firm   </label>
+              </span>
+              <span  class=" p-3"  >
+                <input class="form-check-input " type="radio" name="Registered_With" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+                Not Registered  </label>
+              </span>
+            </div>
+              <div class="col-md-6 p-3">
+                  <label class="" for=""> <b>Formed Through</b> </label>
+                <select class="form-select " name="formed" aria-label="Default select example">
+                  <option selected>Elections</option>
+                  <option value="1">By Will</option>
+                  <option value="2">Others</option>
+                </select>
+              </div>
+            </div>
+            <div class="row py-3 ">       
+              <div class="col-md-6">   <label for=""> <b>Registered Voters</b> </label>
+                <input type="number" class="form-control" name="register_voter" placeholder="i.e.  259"></div>
+              <div class="col-md-6"> <label for=""> <b>Total Agents </b> </label>
+                <input type="number" class="form-control" name="total_agent" placeholder="i.e.  451"></div>
+            </div>
+            <div class="row py-3 ">       
+              <div class="col-md-6">   <label for=""> <b> Focal person Name</b> </label>
+                <input type="text" class="form-control" name="focal_person_name" placeholder="i.e.  ali riaz"></div>
+              <div class="col-md-6"> <label for=""> <b>Focal person Number </b> </label>
+                <input type="number" class="form-control" name="focal_person_number" placeholder="i.e.  03xx-xxxxxxx"></div>
+            </div>
+            <div class="row py-3 ">       
+              <div class="col-md-6">   <label for=""> <b> Office Address</b> </label>
+                <input type="text" class="form-control" name="office_address" placeholder="i.e.   office no. 137, building tricon tower, johar...."></div>
+              <div class="col-md-6"> <label for=""> <b>Nearest Landmark</b> </label>
+                <input type="text" class="form-control" name="nearest_landmark" placeholder="i.e.  minar-e-pakistan"></div>
+            </div>
+            <div class="row py-3 ">       
+              <div class="col-md-6">   <label for=""> <b> Website</b> </label>
+                <input type="text" class="form-control" name="website" placeholder="i.e.  www.aprea.pk"></div>
+              <div class="col-md-6"> <label for=""> <b>Social media URL </b> </label>
+                <input type="text" class="form-control" name="social_media_url" placeholder="i.e.  www.facebook.com/APREAPK"></div>
+            </div>
+        </div>
+
+
+
+
+        
+            <div class="row py-4">
+              <div class="col-md-4 ">
+                <input class="py-3" type="file" id="img" name="a_member_img" accept="image/*">      
+                <input class="py-3" type="file" id="img" name="a_member_front_cnic" accept="image/*">      
+                <input class="py-3" type="file" id="img" name="a_member_back_cnic" accept="image/*">      
+             </div>
+             <div class="col-md-8">
+                 <h4>
+                    <b >Core Member</b>
+                 </h4>
+                 <div class="row  ">       
+                  <div class="col-md-6">   
+                    <label for=""> <b>Select Type</b> </label>
+                    <select class="form-select " name="a_member_type" aria-label="Default select example">
+                      <option selected>President</option>
+                      <option value="1">Chairman</option>
+                      <option value="2">Vice President</option>
+                      <option value="3">Vice Chairman</option>
+                      <option value="4">Genral Secretary</option>
+                    </select></div>  
+                  <div class="col-md-6">  <label for=""> <b>Full name</b> </label>
+                    <input type="text" class="form-control" name="a_full_name" placeholder="i.e.  mumtaz nawaz"> </div>
+                </div>
+                 <div class="row  ">       
+                  <div class="col-md-6"> 
+                    <label for=""> <b>CNIC</b> </label>
+                    <input type="text" class="form-control" name="a_cnic" placeholder="i.e.  XXXXX-XXXXXXX-X">
+                  </div>  
+                  <div class="col-md-6"> 
+                    <label for=""> <b>Date of Expiry</b> </label>
+                    <input type="number" class="form-control" name="a_date_of_expiriy" placeholder="i.e. 01.01.2023"> </div>
+                </div>
+                 <div class="row  ">       
+                  <div class="col-md-6"> 
+                    <label for=""> <b>Business Name</b> </label>
+                    <input type="text" class="form-control" name="a_business_name" placeholder="I.E. Mumtaz Real Estate">
+                  </div>  
+                  <div class="col-md-6"> 
+                    <label for=""> <b>Email</b> </label>
+                    <input type="number" class="form-control" name="a_email"  placeholder="i.e.  name@email.com"> </div>
+                </div>
+                 <div class="row  ">       
+                  <div class="col-md-6">
+                    <label for=""> <b>Contact Number</b> </label>
+                    <input type="text" class="form-control" name="a_contact_number" placeholder="  03XX-XXXXXXX"> </div>  
+                  <div class="col-md-6"> 
+                    <label for=""> <b>Business Address</b> </label>
+                    <input type="text" class="form-control" name="a_business_name" placeholder="I.E.  office no. 137, building tricon tower, johar ..."> </div>
+                </div>
+              </div>
+            </div>
+
+         <!--  -----------------first add member----------  -->
+<div class="container"> <div class="row py-4">
+  <div class="col-md-4 ">
+    <input class="py-3" type="file" id="img" name="b_member_img" accept="image/*">      
+    <input class="py-3" type="file" id="img" name="b_member_front_cnic" accept="image/*">      
+    <input class="py-3" type="file" id="img" name="b_member_back_cnic" accept="image/*">      
+ </div>
+ <div class="col-md-8">
+     <h4>
+        <b >Core Member</b>
+     </h4>
+     <div class="row  ">       
+      <div class="col-md-6">   
+        <label for=""> <b>Select Type</b> </label>
+        <select class="form-select " name="b_member_type" aria-label="Default select example">
+          <option selected>President</option>
+          <option value="1">Chairman</option>
+          <option value="2">Vice President</option>
+          <option value="3">Vice Chairman</option>
+          <option value="4">Genral Secretary</option>
+        </select></div>  
+      <div class="col-md-6">  <label for=""> <b>Full name</b> </label>
+        <input type="text" class="form-control" name="b_full_name" placeholder="i.e.  mumtaz nawaz"> </div>
+    </div>
+     <div class="row  ">       
+      <div class="col-md-6"> 
+        <label for=""> <b>CNIC</b> </label>
+        <input type="text" class="form-control" name="b_cnic" placeholder="i.e.  XXXXX-XXXXXXX-X">
+      </div>  
+      <div class="col-md-6"> 
+        <label for=""> <b>Date of Expiry</b> </label>
+        <input type="number" class="form-control" name="b_date_of_expiriy" placeholder="i.e. 01.01.2023"> </div>
+    </div>
+     <div class="row  ">       
+      <div class="col-md-6"> 
+        <label for=""> <b>Business Name</b> </label>
+        <input type="text" class="form-control" name="b_business_name" placeholder="I.E. Mumtaz Real Estate">
+      </div>  
+      <div class="col-md-6"> 
+        <label for=""> <b>Email</b> </label>
+        <input type="number" class="form-control" name="b_email"  placeholder="i.e.  name@email.com"> </div>
+    </div>
+     <div class="row  ">       
+      <div class="col-md-6">
+        <label for=""> <b>Contact Number</b> </label>
+        <input type="text" class="form-control" name="b_contact_number" placeholder="  03XX-XXXXXXX"> </div>  
+      <div class="col-md-6"> 
+        <label for=""> <b>Business Address</b> </label>
+        <input type="text" class="form-control" name="b_business_name" placeholder="I.E.  office no. 137, building tricon tower, johar ..."> </div>
+    </div>
+  </div>
+</div>
+</div>
+<!--  -----------------2nd add member----------  -->
+<div class="container">  
+  <div class="row py-4">
+  <div class="col-md-4 ">
+    <input class="py-3" type="file" id="img" name="c_member_img" accept="image/*">      
+    <input class="py-3" type="file" id="img" name="c_member_front_cnic" accept="image/*">      
+    <input class="py-3" type="file" id="img" name="c_member_back_cnic" accept="image/*">      
+ </div>
+ <div class="col-md-8">
+     <h4>
+        <b >Core Member</b>
+     </h4>
+     <div class="row  ">       
+      <div class="col-md-6">   
+        <label for=""> <b>Select Type</b> </label>
+        <select class="form-select " name="c_member_type" aria-label="Default select example">
+          <option selected>President</option>
+          <option value="1">Chairman</option>
+          <option value="2">Vice President</option>
+          <option value="3">Vice Chairman</option>
+          <option value="4">Genral Secretary</option>
+        </select></div>  
+      <div class="col-md-6">  <label for=""> <b>Full name</b> </label>
+        <input type="text" class="form-control" name="c_full_name" placeholder="i.e.  mumtaz nawaz"> </div>
+    </div>
+     <div class="row  ">       
+      <div class="col-md-6"> 
+        <label for=""> <b>CNIC</b> </label>
+        <input type="text" class="form-control" name="c_cnic" placeholder="i.e.  XXXXX-XXXXXXX-X">
+      </div>  
+      <div class="col-md-6"> 
+        <label for=""> <b>Date of Expiry</b> </label>
+        <input type="number" class="form-control" name="c_date_of_expiriy" placeholder="i.e. 01.01.2023"> </div>
+    </div>
+     <div class="row  ">       
+      <div class="col-md-6"> 
+        <label for=""> <b>Business Name</b> </label>
+        <input type="text" class="form-control" name="c_business_name" placeholder="I.E. Mumtaz Real Estate">
+      </div>  
+      <div class="col-md-6"> 
+        <label for=""> <b>Email</b> </label>
+        <input type="number" class="form-control" name="c_email"  placeholder="i.e.  name@email.com"> </div>
+    </div>
+     <div class="row  ">       
+      <div class="col-md-6">
+        <label for=""> <b>Contact Number</b> </label>
+        <input type="text" class="form-control" name="c_contact_number" placeholder="  03XX-XXXXXXX"> </div>  
+      <div class="col-md-6"> 
+        <label for=""> <b>Business Address</b> </label>
+        <input type="text" class="form-control" name="c_business_name" placeholder="I.E.  office no. 137, building tricon tower, johar ..."> </div>
+    </div>
+  </div>
+</div>
+ 
+         
+       
+     
+
+        
+
+<button class="my-4 px-3"  type="submit">submit</button>
+
+
+ </div>
+</div>
+  </form>
+  
+</div>
+
+{% comment %} 
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+<script>
+$("#imageUpload").change(function() {
+  if (this.files && this.files[0]) {
+        var reader = new FileReader();
+        reader.onload = function(e) {
+          console.log(e.target.result)
+            $('#imagePreview').css('background-image', 'url('+e.target.result +')');
+      
+        }
+        reader.readAsDataURL(this.files[0]);
+    }
+}); 
+$("#imageUpload1").change(function() {
+  if (this.files && this.files[0]) {
+        var reader = new FileReader();
+        reader.onload = function(e) {
+          console.log(e.target.result)
+            $('#imagePreview1').css('background-image', 'url('+e.target.result +')');
+      
+        }
+        reader.readAsDataURL(this.files[0]);
+    }
+});
+$("#imageUpload-box").change(function() {
+  if (this.files && this.files[0]) {
+        var reader = new FileReader();
+        reader.onload = function(e) {
+          console.log(e.target.result)
+            $('#imagePreview-box').css('background-image', 'url('+e.target.result +')');
+      
+        }
+        reader.readAsDataURL(this.files[0]);
+    }
+});
+</script> {% endcomment %}
+ 
+
+{%endblock content%}

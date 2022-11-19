@@ -1,0 +1,224 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+Homepage - APREA
+{% endblock title %}
+
+{% block content %}
+
+</div>
+
+    <main id="main">  
+      <div class="news-single nav-arrow-b">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="news-img-box">
+                <style>
+                  .post-img-h{
+                height: 32rem;
+            }
+            @media screen and (max-width: 600px) {
+                .post-img-h{
+                    height: 22rem;
+                }
+              }
+                </style>
+                <img style="width: 100%; margin-top: 70px;" src={{blog.picture}} alt="" class="  post-img-h">
+              </div>
+            </div>
+            <div class="container">
+              <div style="margin-top: 50px;" class="">
+                <div class="container pb-3">
+                  <div style="border-left: solid 3px #2eca6a;" class="row">
+                    <div class="col-md-12 col-lg-8 ">
+                      <div style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;" class="">
+                        <span style="font-size: 17px;" class="color-text-a">Title</span>
+            
+                        <h3 style=" font-size: 31px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;"  class="title-single">{{blog.title}}</h3>
+                      </div>
+                    </div>
+                    <div class="col-md-12 col-lg-4">
+                      <nav aria-label="breadcrumb" class="breadcrumb-box d-flex justify-content-lg-end">
+                        <ol class="breadcrumb">
+                          <li class="breadcrumb-item">
+                            <a href="#">Home</a>
+                          </li>
+                          <li class="breadcrumb-item active" aria-current="page">
+                            Book Cover Deisgn
+                          </li>
+                        </ol>
+                      </nav>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+           
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div>
+      
+      <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+        <div class="post-information">
+          <ul class="list-inline text-center color-a">
+            <li class="list-inline-item mr-2">
+              <strong>Author: </strong>
+              <span class="color-text-a">Morgan Jimenez</span>
+            </li>
+            <li class="list-inline-item mr-2">
+              <strong>Category: </strong>
+              <span class="color-text-a">Travel</span>
+            </li>
+            <li class="list-inline-item">
+              <strong>Date: </strong>
+              <span class="color-text-a">{{blog.date}}</span>
+            </li>
+          </ul>
+        </div>
+        <div class="post-content color-text-a">
+          <!-- <p class="post-intro">{{blog.title}}
+          </p> -->
+          <p>
+              {{blog.discription}}
+          </p>
+          <p>
+            Pellentesque in ipsum id orci porta dapibus. Curabitur non nulla sit amet nisl tempus convallis quis ac
+            lectus. Curabitur
+            non nulla sit amet nisl tempus convallis quis ac lectus. Proin eget tortor risus. Curabitur non
+            nulla sit amet nisl tempus convallis quis ac lectus. Donec rutrum congue leo eget malesuada.
+            Quisque velit nisi.
+          </p>
+     
+          <p>
+            Donec rutrum congue leo eget malesuada. Curabitur aliquet quam id dui posuere blandit. Vivamus suscipit
+            tortor eget felis
+            porttitor volutpat. Quisque velit nisi, pretium ut lacinia in, elementum id enim.
+          </p>
+          <blockquote class="blockquote">
+            <!-- <p class="mb-4">{{blog.url}}
+            </p> -->
+            <footer class="blockquote-footer">
+              <strong>Albert Vargas</strong>
+              <cite title="Source Title">Author</cite>
+            </footer>
+          </blockquote>
+        </div>
+        <div class="post-footer">
+          <div class="post-share">
+            <span>Share: </span>
+            <ul class="list-inline socials">
+              <li class="list-inline-item">
+                <a href="#">
+                  <i class="bi bi-facebook" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">
+                  <i class="bi bi-twitter" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">
+                  <i class="bi bi-instagram" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">
+                  <i class="bi bi-linkedin" aria-hidden="true"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-10 offset-md-1 col-lg-10 offset-lg-1">
+        <div class="title-box-d">
+          <h5 class="">Comments (4)</h5>
+        </div>
+        <div class="box-comments">
+          <ul class="list-comments">
+            <li>
+              <div class="comment-avatar">
+                <img class="rounded-circle"  src="{% static 'assets/img/agent-1.jpg' %}" alt="">
+              </div>
+              <div class="comment-details">
+                <h5 class="">Emma Stone</h5>
+                <span style="font-size: 13px;">18 Sep 2017</span>
+                <p class="">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores reprehenderit, provident cumque
+                  ipsam temporibus maiores
+                  quae natus libero optio, at qui beatae ducimus placeat debitis voluptates amet corporis.
+                </p>
+               </div>
+            </li>
+            <li >
+              <div class="comment-avatar">
+                <img class="rounded-circle"  src="{% static 'assets/img/agent-2.jpg' %}" alt="">
+              </div>
+              <div class="comment-details">
+                <h5 class="">Oliver Colmenares</h5>
+                <span  style="font-size: 13px;">18 Sep 2017</span>
+                <p class="">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores reprehenderit, provident cumque
+                  ipsam temporibus maiores
+                  quae.
+                </p>
+               </div>
+            </li>
+            {%for comment in comments%}
+            <li>
+              <div class="comment-avatar">
+                <img class="rounded-circle"  src="{{comment.user_image}}" alt="">
+              </div>
+              <div class="comment-details">
+                <h5 class="">{{comment.user_name}}</h5>
+                <span style="font-size: 13px;">{{comment.date}}</span>
+                <p class="">
+                  {{comment.comment}}
+                </p>
+               </div>
+            </li>
+            {%endfor%}
+          </ul>
+        </div>
+        <div class="form-comments">
+          <div class="title-box-d">
+            <h3 style="font-size: 23px;" class="title-d"> Leave a Reply</h3>
+          </div>
+          {%if user.email%}
+          <form class="form-a" method="post">
+            {% csrf_token %}
+            {%if user.socialaccount_set.all.0.extra_data.name %}
+            <input type="text" name="email" value="{{user.email}}" style="display: none;">
+            <input type="text" name="social_user_name" value="{{ user.socialaccount_set.all.0.extra_data.name }}" style="display:none">
+            <input type="text" name="social_user_pic" value="{{ user.socialaccount_set.all.0.get_avatar_url }}" style="display: none;" id="">
+            {% endif %}
+
+            <div class="row">
+              <div class="col-md-12 mb-3">
+                <div class="form-group">
+                   <textarea id="textMessage" class="form-control" placeholder="Comment *" name="message" cols="45"
+                    rows="3" required></textarea>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <button type="submit" class="btn btn-success">Post Comment</button>
+              </div>
+            </div>
+          </form>
+          {%else%}
+          <h5>To leave a replay on this Artical You should login first!</h5>
+          {%endif%}
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+{% endblock content %}

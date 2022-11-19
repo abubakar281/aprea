@@ -1,0 +1,103 @@
+.our-mission {
+    padding-right: 280px;
+}
+
+.honor-Chairman {
+    font-size: 10px;
+}
+
+.video-img {
+    margin: auto;
+}
+
+.icon-go-left {
+    text-align: flex-end;
+}
+
+.small-screen-padding{
+    padding: 0 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+@media screen and (max-width: 480px) {
+
+    .mission-auto-l {
+        margin: 0 0 0 0;
+    }
+
+    .our-mission {
+        padding-right: 0px;
+    }
+
+    .about-team-r {
+        padding: 0 40px;
+
+    }
+
+    .about-team-l {
+        padding: 0 10px 0 20px;
+
+    }
+
+    .about-team-t {
+        padding: 50px;
+    }
+
+
+
+
+}

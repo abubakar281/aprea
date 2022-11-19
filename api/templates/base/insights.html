@@ -1,0 +1,267 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+Insightspage - APREA
+{% endblock title %}
+
+{% block content %}
+
+</div>
+
+<div class="container">
+
+    <div class="row">
+        <div class="col-md-6 py-5  ">
+            <div class="row p-4">
+                <img src="{% static 'assets/img/artical.png' %}" alt="">
+                <div style="font-size:11px ; font-weight: 200;" class="col-md-6 pt-2">
+                    <i class="bi bi-person "></i> <span class="pr-4">Admin</span>
+                    <i class="pl-4 bi bi-chat-dots"></i>
+                    <span>0 Comments</span>
+                </div>
+                <div class="col-6">
+
+                </div>
+                <div class="p-2 ">
+                    <h2 style=" font-size: 23px; font-weight: 700; " class="pr-2">Standard size of business agency
+                        Consulating Alouas atom Management.</h2>
+                    <p style="font-size: 12px;" class="pr-2 ">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut venenatis sagittis tortor, in
+                        convallis
+                        justo sagittis et. Nunc placerat risus sem, vitae dictum libero laoreet sit amet.
+                        Suspendisse
+                        semper
+
+                        pharetra eget. Aenean viverra interdum condimentum. Cras mollis, arcu vel fermentum auctor,
+                        neque
+                        velit pharetra sapien, sed consectetur nulla mi id nunc. Pellentesque habitant morbi
+                        tristique
+                        senectus et netus et malesuada fames ac turpis egestas. Nulla accumsan, nulla non molestie
+                        vehicula,
+                        mi ipsum ultrices arcu, ac enim.
+                    </p>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="col-md-6 py-5  ">
+            <div class="row">
+                {% for i in articals%}
+                <div class="col-6">
+                <a href='articals/{{i.id}}/'>
+                    <div class="row py-4">
+                        <img style="width: 100%; height: 170px;" src={{i.picture}} alt="data can't render">
+                        <div style="font-size:11px ; font-weight: 200;" class="col-12 pt-2">
+                            <i class="bi bi-person "></i> <span class="pr-4">{{i.author}}</span>
+                            <i class="pl-4 bi bi-chat-dots"></i>
+                            <span>0 Comments</span>
+                        </div>
+                        <div class="col-6">
+
+                        </div>
+                        <div class="p-2 ">
+                            <h2 style=" font-size: 18px; font-weight: 700;" class="pr-2">{{i.title}}
+                            </h2>
+                            <hr>
+                            <h6 style="font-size: 12px; margin-top:-8px ;">Read More+</h6>
+
+                        </div>
+
+                    </div>
+                </a>
+                </div>
+                {% endfor %}
+            </div>
+
+        </div>
+    </div>
+
+
+</div>
+</div>
+
+<div class="container-fluid  py-5" style="background: linear-gradient(282.3deg, #00234B 2.21%, #00AA4B 96.67%);">
+    <div class="row ">
+        <div class="col-md-1"></div>
+        <div class=" col-md-10 ">
+          <h1 class="text-light text-center title-a p-2" style=" font-family: lato; font-size: 32px; font-weight: 600;">
+                Publications
+            </h1>   
+   
+        </div>
+
+        <div class="col-md-1"></div>
+    </div>
+
+
+
+    <div class="container">
+        <div class="row">
+            {%for pub in publications%}
+            <div class="col-sm-6 col-md-3">
+                <a href='publications/{{pub.id}}/'>
+                <button class="text-light h-3" style="  border: none; background: transparent;" type="submit"><img style="width: 100%; height: 170px;" src={{pub.picture}}></button>
+                <button class="text-light h-3" style="  border: none; background: transparent;" type="submit">{{pub.title}}</button>
+                </a>
+            </div>
+            {%endfor%}
+        </div>
+    </div>
+
+
+</div>
+
+</div>
+
+<div class="container py-md-5 ">
+
+    <div class="row p-md-5">
+        <div class="col-md-1"></div>
+        <div class="col-md-3">
+            <a  data-toggle="modal" data-target="#myModal" style="cursor: pointer;">
+                <div class="row py-4">
+                    <img style="width: 100%; height: 300px;" src="{% static 'assets/img/minar-6.png' %}" alt="">
+                    <div style="font-size:11px ; font-weight: 200;" class="col-12 pt-2">
+                        <i class="bi bi-person "></i> <span class="pr-4">Admin</span>
+                        <i class="pl-4 bi bi-chat-dots"></i>
+                        <span>0 Comments</span>
+                    </div>
+                    <div class="col-6">
+
+                    </div>
+                    <div class="p-2 ">
+                        <h2 style=" font-size: 18px; font-weight: 700;" class="pr-2">Standard size of business
+                            agency Consulating Management.
+                        </h2>
+                    </div>
+
+                </div>
+            </a>
+        </div>
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+            
+              <!-- Modal content-->
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                  <p style="color:black;">Login First to See Research Articals</p>
+                </div>
+                <div class="modal-footer">
+                  <a href="signin" class="btn btn-success">Sign In</a>
+                  <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        <div class="col-md-3">
+            <div class="row py-4">
+                <img style="width: 100%; height: 300px;" src="{% static 'assets/img/minar-7.png' %}" alt="">
+                <div style="font-size:11px ; font-weight: 200;" class="col-12 pt-2">
+                    <i class="bi bi-person "></i> <span class="pr-4">Admin</span>
+                    <i class="pl-4 bi bi-chat-dots"></i>
+                    <span>0 Comments</span>
+                </div>
+                <div class="col-6">
+
+                </div>
+                <div class="p-2 ">
+                    <h2 style=" font-size: 18px; font-weight: 700;" class="pr-2">Standard size of business
+                        agency Consulating Management.
+                    </h2>
+                </div>
+
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="row py-4">
+                <img style="width: 100%; height: 300px;" src="{% static 'assets/img/minar-8.png' %}" alt="">
+                <div style="font-size:11px ; font-weight: 200;" class="col-12 pt-2">
+                    <i class="bi bi-person "></i> <span class="pr-4">Admin</span>
+                    <i class="pl-4 bi bi-chat-dots"></i>
+                    <span>0 Comments</span>
+                </div>
+                <div class="col-6">
+
+                </div>
+                <div class="p-2 ">
+                    <h2 style=" font-size: 18px; font-weight: 700;" class="pr-2">Standard size of business
+                        agency Consulating Management.
+                    </h2>
+                </div>
+
+            </div>
+        </div>
+        <div class="col-md-1"></div>
+    </div>
+
+    <div class="row px-md-5">
+        <div class="col-md-1"></div>
+        <div class="col-md-3">
+            <div class="row ">
+                <img style="width: 100%; height: 300px;" src="{% static 'assets/img/minar-6.png' %}" alt="">
+                <div style="font-size:11px ; font-weight: 200;" class="col-12 pt-2">
+                    <i class="bi bi-person "></i> <span class="pr-4">Admin</span>
+                    <i class="pl-4 bi bi-chat-dots"></i>
+                    <span>0 Comments</span>
+                </div>
+                <div class="col-6">
+
+                </div>
+                <div class="p-2 ">
+                    <h2 style=" font-size: 18px; font-weight: 700;" class="pr-2">Standard size of business
+                        agency Consulating Management.
+                    </h2>
+                </div>
+
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="row ">
+                <img style="width: 100%; height: 300px;" src="{% static 'assets/img/minar-7.png' %}" alt="">
+                <div style="font-size:11px ; font-weight: 200;" class="col-12 pt-2">
+                    <i class="bi bi-person "></i> <span class="pr-4">Admin</span>
+                    <i class="pl-4 bi bi-chat-dots"></i>
+                    <span>0 Comments</span>
+                </div>
+                <div class="col-6">
+
+                </div>
+                <div class="p-2 ">
+                    <h2 style=" font-size: 18px; font-weight: 700;" class="pr-2">Standard size of business
+                        agency Consulating Management.
+                    </h2>
+                </div>
+
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="row ">
+                <img style="width: 100%; height: 300px;" src="{% static 'assets/img/minar-8.png' %}" alt="">
+                <div style="font-size:11px ; font-weight: 200;" class="col-12 pt-2">
+                    <i class="bi bi-person "></i> <span class="pr-4">Admin</span>
+                    <i class="pl-4 bi bi-chat-dots"></i>
+                    <span>0 Comments</span>
+                </div>
+                <div class="col-6">
+
+                </div>
+                <div class="p-2 ">
+                    <h2 style=" font-size: 18px; font-weight: 700;" class="pr-2">Standard size of business
+                        agency Consulating Management.
+                    </h2>
+                </div>
+
+            </div>
+        </div>
+        <div class="col-1"></div>
+    </div>
+</div>
+</div>
+
+
+{% endblock content %}

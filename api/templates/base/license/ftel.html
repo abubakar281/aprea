@@ -1,0 +1,1373 @@
+{% extends 'base.html' %} 
+{% load static %} 
+{% block title %} 
+License - APREA 
+{%endblock title %} 
+{% block content %}
+
+
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"> 
+
+<style>
+  .avatar-upload {
+  position: relative;
+  max-width: 115px;
+  margin: 0px ;  
+  } 
+  
+    .avatar-upload .avatar-edit {
+  position: absolute;
+  right: 12px;
+  z-index: 1;
+  top: 10px;
+  }
+  
+  .avatar-upload .avatar-edit input {
+  display: none;
+  }    
+  
+  .avatar-upload .avatar-edit input+label {
+  display: inline-block;
+  width: 38px;
+  height: 38px;
+  margin-bottom: 0;
+  border-radius: 100%;
+  background: #FFFFFF;
+  border: 1px solid transparent;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+  font-weight: normal;
+  transition: all 0.2s ease-in-out;
+  }
+  
+  .avatar-upload .avatar-edit input+label:hover {
+  background: #f1f1f1;
+  border-color: #d6d6d6;
+  }
+  
+  .avatar-upload .avatar-edit input+label:after {
+  content: "\f040";
+  font-family: 'FontAwesome';
+  font-size: 12px;
+  color: #757575;
+  position: absolute;
+  top: 10px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  margin: auto;
+  }
+  
+  
+  .avatar-uploady .avatar-previewy {
+  width: 92px;
+  height: 92px;
+  position: relative;
+  border-radius: 100%;
+  border: 6px solid #F8F8F8;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+  }
+  
+  .avatar-uploadx .avatar-previewx {
+  width: 92px;
+  height: 92px;
+  position: relative;
+  border-radius: 10%;
+  border: 6px solid #F8F8F8;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+  }
+  .avatar-upload .avatar-preview>div {
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  }
+  .avatar-upload-box {
+     position: relative;
+     max-width: 260px;
+    }
+  
+   .avatar-upload-box .avatar-edit-box {
+     position: absolute;
+     right: 12px;
+     z-index: 1;
+     top: 0px;
+    }
+  
+   .avatar-upload-box .avatar-edit-box input {
+     display: none;
+   }
+  
+   .avatar-upload-box .avatar-edit-box input+label {
+     display: inline-block;
+     width: 32px;
+     height: 32px;
+     margin-bottom: 0;
+     border-radius: 2%;
+     background: #FFFFFF;
+     border: 1px solid transparent;
+     box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
+     cursor: pointer;
+     font-weight: normal;
+     transition: all 0.2s ease-in-out;
+   }
+  
+   .avatar-upload-box .avatar-edit-box input+label:hover {
+     background: #f1f1f1;
+     border-color: #d6d6d6;
+   }
+  
+   .avatar-upload-box .avatar-edit-box input+label:after {
+     content: "\f040";
+     font-family: 'FontAwesome';
+     font-size: 15px;
+     color: #757575;
+     position: absolute;
+     top: 10px;
+     left: 0;
+     right: 0;
+     text-align: center;
+     margin: auto;
+   }
+  
+   .avatar-upload-box .avatar-preview-box {
+     width: 242px;
+     height: 132px;
+     position: relative;
+     border-radius: 2%;
+     border: 3px solid #F8F8F8;
+     box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+   }
+  
+   .avatar-upload-box .avatar-preview-box>div {
+     width: 100%;
+     height: 100%;
+     border-radius: 2%;
+     background-size: cover;
+      background-repeat: no-repeat;
+     background-position: center;
+   }
+  
+   @media screen and (max-width: 600px) {
+      .avatar-upload-box .avatar-preview-box {
+     width: 242px;
+     height: 70px;
+     position: relative;
+     border-radius: 2%;
+     border: 3px solid #F8F8F8;
+     box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+   }
+  }
+  
+  </style>
+<div class="container" style="padding-top: 20px;padding-bottom: 30px;">
+    <div class="row py-5 my-5 text-center">
+        <h2 class="text-light">License</h2>
+    </div>
+</div>
+
+</div>
+<div class="container">
+  
+<div class="row">
+  <div class="col-md-6">
+    <select id="brokertype" onchange="brokertype()" class="form-select my-5" aria-label="Default select example">
+      <option selected>Type of Broker</option>
+      <option value="full_time">Full Time</option>
+      <option value="part_time">Part Time</option>
+      <option value="freelance">Freelance</option>
+     </select>
+  </div>
+  <div class="col-md-6">
+    <select id="emptype" style="display: none;" onchange="emptype()" class="form-select my-5" aria-label="Default select example">
+      <option selected>Type of Employee</option>
+      <option value="employer">Owner</option>
+      <option value="employee">Employee</option>
+     </select>
+  </div>
+</div>
+
+</div>
+
+
+<div id="full_time_employer" style="display: none">
+  <div class="container">
+    <div class="row p-5">
+      <div class="col-md-4">
+        <h2>
+          <b
+            >Ready To Get <br />
+            Registered</b
+          >
+        </h2>
+      </div>
+      <div class="col-md-8">
+        <p>Full Time Employer</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <form method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+      <input type="text" name="type" value="full_time_employer" style="display: none;" id="">
+      <div class="row p-5">
+        <div class="col-md-4">
+          <div class="container">
+            <div style="z-index: 3" class="avatar-edit">
+            <label class="pt-4" for="">Profile</label>
+            <input type="file" id="imageUpload" name="profile" accept=".png, .jpg, .jpeg"  required />
+
+            <label class="pt-4" for="">CNIC front</label>
+            <input type="file" id="imageUpload" name="cnic-front" accept=".png, .jpg, .jpeg" required />
+
+            <label class="pt-4" for="">CNIC Back</label>
+            <input type="file" id="imageUpload" name="cnic-back" accept=".png, .jpg, .jpeg"  required/>
+         
+
+           </div></div>
+ 
+        </div>
+        <div class="col-md-8">
+          <div class="row">
+            <div class="col-md-6 p-2">
+              <p>
+                <b>Apply</b>
+              </p>
+            </div>
+            <div class="col-md-6"></div>
+            <div class="col-md-6">
+              <div class="form-outline flex-fill">
+                <label for=""> <b> Full Name</b> </label>
+                <input
+                  type="text"
+                  class="form-control"
+                  name="FullName"
+                  placeholder="Admin "
+                />
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-outline flex-fill">
+                <label for=""> <b>Last Name </b> </label>
+                <input
+                  type="text"
+                  class="form-control"
+                  name="LastName"
+                  placeholder="i.e Mumtaz Nawaz"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="row py-3">
+            <div class="col-md-6">
+              <label for=""> <b>Cnic</b> </label>
+              <input
+                type="number"
+                class="form-control"
+                name="cnic"
+                placeholder="i.e.  XXXXX-XXXXXXX-X"
+              />
+            </div>
+            <div class="col-md-6">
+              <label for=""> <b>Date Of Expiry </b> </label>
+              <input
+                type="number"
+                class="form-control"
+                name="date_of_expiriy"
+                placeholder="i.e. 01.01.2023"
+              />
+            </div>
+          </div>
+          <div class="row py-3">
+            <div class="col-md-6">
+              <label for=""> <b>Date of Birth</b> </label>
+              <input
+                type="text"
+                class="form-control"
+                name="date_of_birth"
+                placeholder="i.e. DD-MM-YYYY"
+              />
+            </div>
+            <div class="col-md-6">
+              <label for=""> <b>Email </b> </label>
+              <input
+                type="number"
+                class="form-control"
+                name="email"
+                placeholder="i.e.  Name@Email.Com"
+              />
+            </div>
+          </div>
+          <div class="row py-3">
+            <div class="col-md-6">
+              <label for=""> <b>Address</b> </label>
+              <input
+                type="text"
+                class="form-control"
+                name="address"
+                placeholder="i.e.   building tricon tower, johar...."
+              />
+            </div>
+            <div class="col-md-6">
+              <label for=""> <b>Phone No.</b> </label>
+              <input
+                type="text"
+                class="form-control"
+                name="phone_number"
+                placeholder="i.e.  Office No. 137, Building Tricon Tower, Johar ..."
+              />
+            </div>
+          </div>
+        </div>
+ 
+        
+        
+
+        
+        <div id="company_details" class="pt-md-4" >
+        <div class="row">
+          <div class="col-md-4">
+            <input
+              class="py-3"
+              type="file"
+              id="img"
+              name="a_member_img"
+              accept="image/*"
+            />
+            <input
+              class="py-3"
+              type="file"
+              id="img"
+              name="a_member_front_cnic"
+              accept="image/*"
+            />
+          </div>
+
+          <div class="col-md-8">
+            <h4 class="py-3">
+              <b>Company Details</b>
+            </h4>
+            <div class="row">
+              <div class="col-md-4">
+                <div class="form-outline flex-fill mb-0">
+                  <label for=""> <b> Province</b> </label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="province"
+                    placeholder="Punjab "
+                  />
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="form-outline flex-fill mb-0">
+                  <label for=""> <b>City </b> </label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="City"
+                    placeholder="Lahore"
+                  />
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="form-outline flex-fill mb-0">
+                  <label for=""> <b>Area</b> </label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="area"
+                    placeholder="Bahria Town"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <label for=""> <b>Company Name</b> </label>
+                <input
+                  type="text"
+                  class="form-control"
+                  name="company_name"
+                  placeholder="i.e. All Paksitan Real Estate Association"
+                />
+              </div>
+              <div class="col-md-6">
+                <label for=""> <b>Contact No.</b> </label>
+                <input
+                  type="number"
+                  class="form-control"
+                  name="company_number"
+                  placeholder="i.e.  Minar-E-Pakistan"
+                />
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <label for=""> <b>Office Address</b> </label>
+                <input
+                  type="text"
+                  class="form-control"
+                  name="office_address"
+                  placeholder="i.e. office no. 137, building tricon tower, johar...."
+                />
+              </div>
+              <div class="col-md-6">
+                <label for=""> <b>Website</b> </label>
+                <input
+                  type="text"
+                  class="form-control"
+                  name="office_web"
+                  placeholder="i.e. www.aprea.pk"
+                />
+              </div>
+            </div>
+
+            <br /><br />
+
+            <center>
+              <button
+                class="my-4 px-3 btn"
+                style="
+                  height: 40px;
+                  width: 80%;
+                  background-color: #01694f;
+                  color: #ffffff;
+                "
+                type="submit"
+              >
+                Register
+              </button>
+            </center>
+          </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div id="full_time_employee" style="display: none">
+  <div class="container">
+    <div class="row p-5">
+      <div class="col-md-4">
+        <h2>
+          <b
+            >Ready To Get <br />
+            Registered</b
+          >
+        </h2>
+      </div>
+      <div class="col-md-8">
+        <p>Full Time Employee</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <form action=" " method="post">
+      {% csrf_token %}
+      <div class="row p-5">
+        <div class="col-md-4">
+          <div class="container">
+            <div class="avatar-upload avatar-uploady">
+              <div style="z-index: 3" class="avatar-edit">
+                <input
+                  type="file"
+                  id="imageUpload"
+                  accept=".png, .jpg, .jpeg"
+                />
+
+                <label for="imageUpload"></label>
+              </div>
+              <div class="avatar-preview avatar-previewy">
+                <div
+                  id="imagePreview"
+                  style="
+                    background-image: url('./../../../static/assets/img/avatar-bg.png');
+                  "
+                ></div>
+              </div>
+            </div>
+            <label for="">Upload SECP Certificate</label>
+
+            <div class="avatar-upload-box">
+              <div style="z-index: 3" class="avatar-edit-box">
+                <input
+                  type="file"
+                  id="imageUpload-box"
+                  accept=".png, .jpg, .jpeg"
+                />
+                <label for="imageUpload-box"></label>
+              </div>
+              <div sty class="avatar-preview-box">
+                <div
+                  id="imagePreview-box"
+                  style="
+                    background-image: url('./../../../static/assets/img/avatar-bg2.png');
+                  "
+                ></div>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="container">
+                <div class="avatar-upload avatar-uploadx">
+                  <div style="z-index: 3; " class="avatar-edit">
+                      <input type='file' id="imageUpload1" accept=".png, .jpg, .jpeg" />
+                      <i class="bi bi-upload"></i>
+                      <label for="imageUpload1"></label>
+                  </div>
+                  <div class="avatar-preview avatar-previewx">
+                      <div id="imagePreview1" style="background-image: url(  './../../../static/assets/img/avatar-bg2.png' );">
+                      </div>
+                  </div>
+              </div>
+              </div>
+      -->
+        </div>
+        <div class="col-md-8">
+          <div class="row">
+            <div class="col-md-6 p-2">
+              <p>
+                <b>Apply</b>
+              </p>
+            </div>
+            <div class="col-md-6"></div>
+            <div class="col-md-6">
+              <div class="form-outline flex-fill">
+                <label for=""> <b> Full Name</b> </label>
+                <input
+                  type="text"
+                  class="form-control"
+                  name="Full Name"
+                  placeholder="Admin "
+                />
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-outline flex-fill">
+                <label for=""> <b>Last Name </b> </label>
+                <input
+                  type="text"
+                  class="form-control"
+                  name="Last Name"
+                  placeholder="i.e Mumtaz Nawaz"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="row py-3">
+            <div class="col-md-6">
+              <label for=""> <b>Cnic</b> </label>
+              <input
+                type="number"
+                class="form-control"
+                name="cnic"
+                placeholder="i.e.  XXXXX-XXXXXXX-X"
+              />
+            </div>
+            <div class="col-md-6">
+              <label for=""> <b>Date Of Expiry </b> </label>
+              <input
+                type="number"
+                class="form-control"
+                name="date_of_expiriy"
+                placeholder="i.e. 01.01.2023"
+              />
+            </div>
+          </div>
+          <div class="row py-3">
+            <div class="col-md-6">
+              <label for=""> <b>Date of Birth</b> </label>
+              <input
+                type="text"
+                class="form-control"
+                name="date_of_birth"
+                placeholder="i.e. DD-MM-YYYY"
+              />
+            </div>
+            <div class="col-md-6">
+              <label for=""> <b>Email </b> </label>
+              <input
+                type="number"
+                class="form-control"
+                name="email"
+                placeholder="i.e.  Name@Email.Com"
+              />
+            </div>
+          </div>
+          <div class="row py-3">
+            <div class="col-md-6">
+              <label for=""> <b>Address</b> </label>
+              <input
+                type="text"
+                class="form-control"
+                name="address"
+                placeholder="i.e.   building tricon tower, johar...."
+              />
+            </div>
+            <div class="col-md-6">
+              <label for=""> <b>Phone No.</b> </label>
+              <input
+                type="text"
+                class="form-control"
+                name="phone_number"
+                placeholder="i.e.  Office No. 137, Building Tricon Tower, Johar ..."
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-4"></div>
+          <div class="col-md-8">
+            <select
+              id="company_details_dropdown_employee"
+              onchange="cdde()"
+              class="form-select my-5"
+              aria-label="Default select example"
+            >
+              <option selected>Do you have Company Address</option>
+              <option value="yes">Yes</option>
+              <option value="no">No</option>
+            </select>
+          </div>
+        </div>
+
+        <div id="company_details_employee" style="display: none">
+        <div class="row py-4">
+          <div class="col-md-4">
+            <input
+              class="py-3"
+              type="file"
+              id="img"
+              name="a_member_img"
+              accept="image/*"
+            />
+            <input
+              class="py-3"
+              type="file"
+              id="img"
+              name="a_member_front_cnic"
+              accept="image/*"
+            />
+          </div>
+
+          <div class="col-md-8">
+            <h4>
+              <b>Company Details</b>
+            </h4>
+            <div class="row">
+              <div class="col-md-4">
+                <div class="form-outline flex-fill mb-0">
+                  <label for=""> <b> Province</b> </label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="province"
+                    placeholder="Punjab "
+                  />
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="form-outline flex-fill mb-0">
+                  <label for=""> <b>City </b> </label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="City"
+                    placeholder="Lahore"
+                  />
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="form-outline flex-fill mb-0">
+                  <label for=""> <b>Area</b> </label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="area"
+                    placeholder="Bahria Town"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <label for=""> <b>Company Name</b> </label>
+                <input
+                  type="text"
+                  class="form-control"
+                  name="company_name"
+                  placeholder="i.e. All Paksitan Real Estate Association"
+                />
+              </div>
+              <div class="col-md-6">
+                <label for=""> <b>Contact No.</b> </label>
+                <input
+                  type="number"
+                  class="form-control"
+                  name="company_number"
+                  placeholder="i.e.  Minar-E-Pakistan"
+                />
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <label for=""> <b>Office Address</b> </label>
+                <input
+                  type="text"
+                  class="form-control"
+                  name="office_address"
+                  placeholder="i.e.   office no. 137, building tricon tower, johar...."
+                />
+              </div>
+            </div>
+
+            <br /><br />
+
+            <center>
+              <button
+                class="my-4 px-3 btn"
+                style="
+                  height: 40px;
+                  width: 80%;
+                  background-color: #01694f;
+                  color: #ffffff;
+                "
+                type="submit"
+              >
+                Register
+              </button>
+            </center>
+          </div>
+        </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+
+<div id="part_time_employee" style="display: none;">
+  <div class="container">
+    <div class="row p-5">
+      <div class="col-md-4">
+        <h2>
+          <b
+            >Ready To Get <br />
+            Registered</b
+          >
+        </h2>
+      </div>
+      <div class="col-md-8">
+        <p>Part Time Employer</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <form action=" " method="post">
+      {% csrf_token %}
+      <div class="row p-5">
+        <div class="col-md-4">
+          <div class="container">
+            <div class="avatar-upload avatar-uploady">
+              <div style="z-index: 3" class="avatar-edit">
+                <input
+                  type="file"
+                  id="imageUpload"
+                  accept=".png, .jpg, .jpeg"
+                />
+
+                <label for="imageUpload"></label>
+              </div>
+              <div class="avatar-preview avatar-previewy">
+                <div
+                  id="imagePreview"
+                  style="
+                    background-image: url('./../../../static/assets/img/avatar-bg.png');
+                  "
+                ></div>
+              </div>
+            </div>
+            <label for="">Upload SECP Certificate</label>
+
+            <div class="avatar-upload-box">
+              <div style="z-index: 3" class="avatar-edit-box">
+                <input
+                  type="file"
+                  id="imageUpload-box"
+                  accept=".png, .jpg, .jpeg"
+                />
+                <label for="imageUpload-box"></label>
+              </div>
+              <div sty class="avatar-preview-box">
+                <div
+                  id="imagePreview-box"
+                  style="
+                    background-image: url('./../../../static/assets/img/avatar-bg2.png');
+                  "
+                ></div>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="container">
+                <div class="avatar-upload avatar-uploadx">
+                  <div style="z-index: 3; " class="avatar-edit">
+                      <input type='file' id="imageUpload1" accept=".png, .jpg, .jpeg" />
+                      <i class="bi bi-upload"></i>
+                      <label for="imageUpload1"></label>
+                  </div>
+                  <div class="avatar-preview avatar-previewx">
+                      <div id="imagePreview1" style="background-image: url(  './../../../static/assets/img/avatar-bg2.png' );">
+                      </div>
+                  </div>
+              </div>
+              </div>
+      -->
+        </div>
+        <div class="col-md-8">
+          <div class="row">
+            <div class="col-md-6 p-2">
+              <p>
+                <b>Apply</b>
+              </p>
+            </div>
+            <div class="col-md-6"></div>
+            <div class="col-md-6">
+              <div class="form-outline flex-fill">
+                <label for=""> <b> Full Name</b> </label>
+                <input
+                  type="text"
+                  class="form-control"
+                  name="Full Name"
+                  placeholder="Admin "
+                />
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-outline flex-fill">
+                <label for=""> <b>Last Name </b> </label>
+                <input
+                  type="text"
+                  class="form-control"
+                  name="Last Name"
+                  placeholder="i.e Mumtaz Nawaz"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="row py-3">
+            <div class="col-md-6">
+              <label for=""> <b>Cnic</b> </label>
+              <input
+                type="number"
+                class="form-control"
+                name="cnic"
+                placeholder="i.e.  XXXXX-XXXXXXX-X"
+              />
+            </div>
+            <div class="col-md-6">
+              <label for=""> <b>Date Of Expiry </b> </label>
+              <input
+                type="number"
+                class="form-control"
+                name="date_of_expiriy"
+                placeholder="i.e. 01.01.2023"
+              />
+            </div>
+          </div>
+          <div class="row py-3">
+            <div class="col-md-6">
+              <label for=""> <b>Date of Birth</b> </label>
+              <input
+                type="text"
+                class="form-control"
+                name="date_of_birth"
+                placeholder="i.e. DD-MM-YYYY"
+              />
+            </div>
+            <div class="col-md-6">
+              <label for=""> <b>Email </b> </label>
+              <input
+                type="number"
+                class="form-control"
+                name="email"
+                placeholder="i.e.  Name@Email.Com"
+              />
+            </div>
+          </div>
+          <div class="row py-3">
+            <div class="col-md-6">
+              <label for=""> <b>Address</b> </label>
+              <input
+                type="text"
+                class="form-control"
+                name="address"
+                placeholder="i.e.   building tricon tower, johar...."
+              />
+            </div>
+            <div class="col-md-6">
+              <label for=""> <b>Phone No.</b> </label>
+              <input
+                type="text"
+                class="form-control"
+                name="phone_number"
+                placeholder="i.e.  Office No. 137, Building Tricon Tower, Johar ..."
+              />
+            </div>
+          </div>
+          <div class="row py-3">
+            <div class="col-md-6">
+              <label for=""> <b>Primary Job</b> </label>
+              <input
+                type="text"
+                class="form-control"
+                name="primary_job"
+                placeholder="i.e. Assitant Manager"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-4"></div>
+          <div class="col-md-8">
+            <select
+              id="ans"
+              onchange="hide()"
+              class="form-select my-5"
+              aria-label="Default select example"
+            >
+              <option selected>Do you have Company Address</option>
+              <option value="yes">Yes</option>
+              <option value="no">No</option>
+            </select>
+          </div>
+        </div>
+        
+        
+        
+
+        
+        <div id="company_details" style="display: none">
+        <div class="row">
+          <div class="col-md-4">
+            <input
+              class="py-3"
+              type="file"
+              id="img"
+              name="a_member_img"
+              accept="image/*"
+            />
+            <input
+              class="py-3"
+              type="file"
+              id="img"
+              name="a_member_front_cnic"
+              accept="image/*"
+            />
+          </div>
+
+          <div class="col-md-8">
+            <h4>
+              <b>Company Details</b>
+            </h4>
+            <div class="row">
+              <div class="col-md-4">
+                <div class="form-outline flex-fill mb-0">
+                  <label for=""> <b> Province</b> </label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="province"
+                    placeholder="Punjab "
+                  />
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="form-outline flex-fill mb-0">
+                  <label for=""> <b>City </b> </label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="City"
+                    placeholder="Lahore"
+                  />
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="form-outline flex-fill mb-0">
+                  <label for=""> <b>Area</b> </label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="area"
+                    placeholder="Bahria Town"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <label for=""> <b>Company Name</b> </label>
+                <input
+                  type="text"
+                  class="form-control"
+                  name="company_name"
+                  placeholder="i.e. All Paksitan Real Estate Association"
+                />
+              </div>
+              <div class="col-md-6">
+                <label for=""> <b>Contact No.</b> </label>
+                <input
+                  type="number"
+                  class="form-control"
+                  name="company_number"
+                  placeholder="i.e.  Minar-E-Pakistan"
+                />
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <label for=""> <b>Office Address</b> </label>
+                <input
+                  type="text"
+                  class="form-control"
+                  name="office_address"
+                  placeholder="i.e. office no. 137, building tricon tower, johar...."
+                />
+              </div>
+              <div class="col-md-6">
+                <label for=""> <b>Website</b> </label>
+                <input
+                  type="text"
+                  class="form-control"
+                  name="office_address"
+                  placeholder="i.e. www.aprea.pk"
+                />
+              </div>
+            </div>
+
+            <br /><br />
+
+            <center>
+              <button
+                class="my-4 px-3 btn"
+                style="
+                  height: 40px;
+                  width: 80%;
+                  background-color: #01694f;
+                  color: #ffffff;
+                "
+                type="submit"
+              >
+                Register
+              </button>
+            </center>
+          </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+
+
+<div id="freelance" style="display: none;">
+  <div class="container">
+    <div class="row p-5">
+      <div class="col-md-4">
+        <h2>
+          <b
+            >Ready To Get <br />
+            Registered</b
+          >
+        </h2>
+      </div>
+      <div class="col-md-8">
+        <p>Freelance</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <form action=" " method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+      <input style="display: none;" type="text" name="type" value="freelance">
+      <div class="row p-5">
+        <div class="col-md-4">
+          <div class="container">
+            <div class="avatar-upload  avatar-uploady">
+              <div style="z-index: 3; " class="avatar-edit">
+                
+                  <input type='file' name="profile" id="imageUpload5" accept=".png, .jpg, .jpeg"  />
+                   
+                  <label for="imageUpload5"></label>
+              </div>
+              <div class="avatar-preview avatar-previewy">
+                  <div id="imagePreview5" style="background-image: url(  './../../../static/assets/img/avatar-bg.png' );">
+                  </div>
+              </div>
+          </div>
+          <label for="">Upload CNIC</label>
+
+            <div class="avatar-upload-box">
+              <div style="z-index: 3;   " class="avatar-edit-box">
+                  <input name="cnic-front" type='file' id="imageUpload6" accept=".png, .jpg, .jpeg" />
+                  <label for="imageUpload6"></label>
+              </div>
+              <div sty class="avatar-preview-box ">
+                  <div id="imagePreview6" style="background-image: url( './../../../static/assets/img/avatar-bg2.png' );">
+                  </div>
+              </div>
+            </div>
+            <div class="avatar-upload-box">
+              <div style="z-index: 3;   " class="avatar-edit-box">
+                  <input type='file' id="imageUpload7"  name="cnic-back" accept=".png, .jpg, .jpeg" />
+                  <label for="imageUpload7"></label>
+              </div>
+              <div sty class="avatar-preview-box ">
+                  <div id="imagePreview7" style="background-image: url( './../../../static/assets/img/avatar-bg2.png' );">
+                  </div>
+              </div>
+            </div>
+            
+          </div>
+     
+    
+        </div>
+        <div class="col-md-8">
+          <div class="row">
+            <div class="col-md-6 p-2">
+              <p>
+                <b>Apply</b>
+              </p>
+            </div>
+            <div class="col-md-6"></div>
+            <div class="col-md-6">
+              <div class="form-outline flex-fill">
+                <label for=""> <b> Full Name</b> </label>
+                <input  type="text"  class="form-control"  name="FullName" placeholder="Admin " maxlength="128" required/>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-outline flex-fill">
+                <label for=""> <b>Last Name </b> </label>
+                <input
+                  type="text"
+                  class="form-control"
+                  name="LastName"
+                  placeholder="i.e Mumtaz Nawaz"
+                  maxlength="128" required/>
+              </div>
+            </div>
+          </div>
+          <div class="row py-3">
+            <div class="col-md-6">
+              <label for=""> <b>Cnic</b> </label>
+              <input
+                type="text"
+                class="form-control"
+                name="cnic"
+                placeholder="i.e.  XXXXX-XXXXXXX-X"
+                maxlength="15" required/>
+            </div>
+            <div class="col-md-6">
+              <label for=""> <b>Date Of Expiry </b> </label>
+              <input
+                type="text"
+                class="form-control"
+                name="date_of_expiriy"
+                placeholder="i.e. 01.01.2023"
+                maxlength="10" required/>
+            </div>
+          </div>
+          <div class="row py-3">
+            <div class="col-md-6">
+              <label for=""> <b>Date of Birth</b> </label>
+              <input
+                type="text"
+                class="form-control"
+                name="date_of_birth"
+                placeholder="i.e. DD-MM-YYYY"
+                maxlength="10" required />
+            </div>
+            <div class="col-md-6">
+              <label for=""> <b>Email </b> </label>
+              <input
+                type="email"
+                class="form-control"
+                name="email"
+                placeholder="i.e.  Name@Email.Com"
+                maxlength="254" required/>
+            </div>
+          </div>
+          <div class="row py-3">
+            <div class="col-md-6">
+              <label for=""> <b>Address</b> </label>
+              <input
+                type="text"
+                class="form-control"
+                name="address"
+                placeholder="i.e.   building tricon tower, johar...."
+                maxlength="999" required/>
+            </div>
+            <div class="col-md-6">
+              <label for=""> <b>Phone No.</b> </label>
+              <input
+                type="text"
+                class="form-control"
+                name="phone_number"
+                placeholder="i.e.  Office No. 137, Building Tricon Tower, Johar ..."
+                minlength="11" maxlength="15" required/>
+            </div>
+          </div>
+          <div class="row py-3">
+            <div class="col-md-6">
+              <label for=""> <b>Profession</b> </label>
+              <input
+                type="text"
+                class="form-control"
+                name="profession"
+                placeholder="i.e. Web"
+                maxlength="99" required/>
+            </div>
+          </div>
+        </div>
+            <br /><br />
+
+            <center>
+              <button
+                class="my-4 px-3 btn"
+                style="
+                  height: 40px;
+                  width: 80%;
+                  background-color: #01694f;
+                  color: #ffffff;
+                "
+                type="submit"
+              >
+                Register
+              </button>
+            </center>
+          </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+<script>
+$("#imageUpload5").change(function() {
+  if (this.files && this.files[0]) {
+        var reader = new FileReader();
+        reader.onload = function(e) {
+          console.log(e.target.result)
+            $('#imagePreview5').css('background-image', 'url('+e.target.result +')');
+      
+        }
+        reader.readAsDataURL(this.files[0]);
+    }
+}); 
+$("#imageUpload6").change(function() {
+  if (this.files && this.files[0]) {
+        var reader = new FileReader();
+        reader.onload = function(e) {
+          console.log(e.target.result)
+            $('#imagePreview6').css('background-image', 'url('+e.target.result +')');
+      
+        }
+        reader.readAsDataURL(this.files[0]);
+    }
+});
+$("#imageUpload7").change(function() {
+  if (this.files && this.files[0]) {
+        var reader = new FileReader();
+        reader.onload = function(e) {
+          console.log(e.target.result)
+            $('#imagePreview7').css('background-image', 'url('+e.target.result +')');
+      
+        }
+        reader.readAsDataURL(this.files[0]);
+    }
+});
+</script>
+<script>
+
+
+    function hide(){
+        a=document.getElementById('ans').value
+        if(a=='yes')
+        document.getElementById('company_details').style='display:unset'
+        else
+        document.getElementById('company_details').style='display:none'
+
+    }
+
+    function cdde(){
+      selec=document.getElementById('company_details_dropdown_employee').value
+      if( selec=="yes")
+      document.getElementById('company_details_employee').style='display:unset'
+      else
+      document.getElementById('company_details_employee').style='display:none'
+    }
+
+
+    function brokertype(){
+      valu=document.getElementById('brokertype').value
+      if(valu=="full_time"){
+      document.getElementById('emptype').style='display:unset'
+      document.getElementById('part_time_employee').style='display:none'
+      document.getElementById('freelance').style='display:none'
+      }
+      else if(valu=='part_time'){
+      document.getElementById('full_time_employer').style='display:none'
+      document.getElementById('full_time_employee').style='display:none'
+      document.getElementById('emptype').style='display:none'
+      document.getElementById('part_time_employee').style='display:unset'
+      document.getElementById('freelance').style='display:none'
+      }
+      else if(valu=='freelance'){
+      document.getElementById('full_time_employer').style='display:none'
+      document.getElementById('full_time_employee').style='display:none'
+      document.getElementById('emptype').style='display:none'
+      document.getElementById('part_time_employee').style='display:none'
+      document.getElementById('freelance').style='display:unset'
+      }
+      else{
+      document.getElementById('full_time_employer').style='display:none'
+      document.getElementById('full_time_employee').style='display:none'
+      document.getElementById('emptype').style='display:none'
+      document.getElementById('part_time_employee').style='display:none'
+      document.getElementById('freelance').style='display:none'
+      }
+    }
+    function emptype(){
+      valu=document.getElementById('emptype').value
+      if(valu=='employee'){
+      document.getElementById('full_time_employee').style='display:unset'
+      document.getElementById('full_time_employer').style='display:none'
+      }
+      else if(valu=='employer'){
+      document.getElementById('full_time_employee').style='display:none'
+      document.getElementById('full_time_employer').style='display:unset'
+      }
+      else{
+      document.getElementById('full_time_employee').style='display:none'
+      document.getElementById('full_time_employer').style='display:none'
+      }
+    }
+</script>
+
+{%endblock content%}

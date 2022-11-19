@@ -1,0 +1,1127 @@
+{% extends 'base.html' %} 
+{% load static %} 
+{% block title %} 
+Aboutpage - APREA
+{% endblock title %}
+{% block content %}
+<!-- <div class="container" style="padding-top: 20px;padding-bottom: 30px;">
+    <div class="row py-5 my-5 text-center">
+        <h2 class="text-light">About</h2>
+    </div>
+</div> -->
+</div>
+
+<div class="container">
+  <div class="mx-md-5 pt-3">
+    <div class="row pt-5">
+      <div class="col-md-6 border-right pt-md-5" style="padding: 20px 0 0 38px">
+        <div class="our-mission">
+          <h1 style="font-size: 46px">
+            <div>
+              <b>
+                Our <br />
+                Mission <br />
+                & Vision
+              </b>
+            </div>
+          </h1>
+        </div>
+      </div>
+      <!-- <div class=" border-right">
+            </div> -->
+      <div class="col-md-6 p-5">
+        <h5>
+          <b> Our Vision </b>
+        </h5>
+        <p>
+          APREA is a trusted ally, licensing all the brokerage community and
+          those who serve through the ever-evolving real estate landscape. It is
+          building a better future for the real estate industry through its
+          commitment to bringing excellence to the brokerage community.
+        </p>
+      </div>
+    </div>
+    <hr />
+    <div class="row">
+      <div class="col-md-5 p-5">
+        <div>
+          <h5>
+            <b> Our Mission </b>
+          </h5>
+          <p>
+            APREA's mission is to educate and empower real estate brokers as
+            they preserve, protect, and advance the right to real estate
+            property for all. It will also uphold the highest standards of
+            ethics and professionalism and protect clients from unlawful
+            practices.
+          </p>
+        </div>
+      </div>
+      <div class="col-md-1 border-right"></div>
+      <div class="col-md-6 p-5">
+        <h5>
+          <b> Diversity & Inclusion </b>
+        </h5>
+        <p>
+          APREA fully embraces perspectives from all walks of life and provides
+          licensing to all—regardless of race, ethnicity, gender, religion, age,
+          disability, or socioeconomic status or any other qualities, by which
+          we may define ourselves.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container p-5">
+  <img
+    style="width: 100%"
+    src="{% static 'assets/img/rectangle.png' %}"
+    alt=""
+  />
+</div>
+
+<div
+  class="container-fluid text-light"
+  style="background: linear-gradient(235deg, #00234b 2.21%, #01a84b 93.67%)"
+>
+  <div class="container py-5">
+    <div class="row">
+      <div class="col-md-6 p-md-5">
+        <h2 class="text-light">
+          <b style="font-family: Lato"> Contributions </b>
+        </h2>
+        <p class="pt-3">
+          APREA, through its platform, aims to serve the real estate industry
+          through certain contributions including brokerage community
+          registration, documenting the real estate industry, educating the
+          stakeholders in the existing real estate market and devising a brief
+          real estate policy in the country to digitally and legally support the
+          current real estate system.
+        </p>
+      </div>
+      {%if user.email %}
+      <div class="col-md-6">
+        <div class="row">
+          <div
+            class="col-5 m-1 col-md-5 on-hover-whight p-3"
+            style="background-color: rgb; cursor: pointer;"
+          >
+          <a href="{%url 'licensing_brokers'%}" class="text-light">
+            <h5
+              class="text-light"
+              style="font-family: Lato; font-weight: 700; font-size: 18pxrgb;"
+            >
+              Registering the Real Estate Brokers
+            </h5>
+            <p style="font-weight: 400; font-size: 13px">
+              Regularize brokers and provide secure and transparent transactions
+            </p>
+            <div class="row">
+              <div class="col-10"></div>
+              <div class="col-2">
+                <span class="" style="font-size: 19px"
+                  ><i class="bi bi-arrow-right-circle"></i
+                ></span>
+              </div>
+            </div>
+          </a>
+          </div>
+          <div class="col-5 m-1 col-md-5 on-hover-whight p-3"
+          style="background-color: rgb; cursor: pointer;">
+          <a href="{%url 'documenting_rei'%}" class="text-light">
+            <h5
+              class="text-light"
+              style="font-family: Lato; font-weight: 700; font-size: 18pxrgb;"
+            >
+              Documenting the Real Estate Industry
+            </h5>
+            <p style="font-weight: 400; font-size: 13px">
+              Shift the existing land record to digitally operated land
+              documentation
+            </p>
+            <div class="row">
+              <div class="col-10"></div>
+              <div class="col-2">
+                <span class="" style="font-size: 19px"
+                  ><i class="bi bi-arrow-right-circle"></i
+                ></span>
+              </div>
+            </div>
+          </div>
+        </a>
+        </div>
+        <div class="row">
+          <div class="col-5 m-1 col-md-5 on-hover-whight p-3"
+          style="background-color: rgb; cursor: pointer;">
+          <a href="{%url 'education_stakeholders'%}" class="text-light">
+            <h5
+              class="text-light"
+              style="font-family: Lato; font-weight: 700; font-size: 18px"
+            >
+              Educating the Stakeholders
+            </h5>
+            <p style="font-weight: 400; font-size: 13px">
+              APREA aims to uplift real estate education in Pakistan
+            </p>
+            <div class="row">
+              <div class="col-10"></div>
+              <div class="col-2">
+                <span class="" style="font-size: 19px"
+                  ><i class="bi bi-arrow-right-circle"></i
+                ></span>
+              </div>
+            </div>
+          </a>
+          </div>
+          
+          <div class="col-5 m-1 col-md-5 on-hover-whight p-3"
+          style="background-color: rgb; cursor: pointer;">
+          <a href="{%url 'pakistan_rep'%}" class="text-light">
+            <h5
+              class="text-light"
+              style="font-family: Lato; font-weight: 700; font-size: 18px"
+            >
+              Pakistan Real Estate Policy
+            </h5>
+            <p style="font-weight: 400; font-size: 13px">
+              Eliminating the old patwar system with a new land management
+              system
+            </p>
+            <div class="row">
+              <div class="col-10"></div>
+              <div class="col-2">
+                <span class="" style="font-size: 19px"
+                  ><i class="bi bi-arrow-right-circle"></i
+                ></span>
+              </div>
+            </div>
+          </a>
+          </div>
+        </div>
+      </div>
+      {% else %}
+      <div class="col-md-6">
+        <div class="row">
+          <div
+            class="col-5 m-1 col-md-5 on-hover-whight p-3"
+            style="background-color: rgb; cursor: pointer;"
+            data-toggle="modal" data-target="#myModal"
+          >
+            <h5
+              class="text-light"
+              style="font-family: Lato; font-weight: 700; font-size: 18pxrgb;"
+            >
+              Registering the Real Estate Brokers
+            </h5>
+            <p style="font-weight: 400; font-size: 13px">
+              Regularize brokers and provide secure and transparent transactions
+            </p>
+            <div class="row">
+              <div class="col-10"></div>
+              <div class="col-2">
+                <span class="" style="font-size: 19px"
+                  ><i class="bi bi-arrow-right-circle"></i
+                ></span>
+              </div>
+            </div>
+          </div>
+          <div class="col-5 m-1 col-md-5 on-hover-whight p-3"
+          style="background-color: rgb; cursor: pointer;"
+            data-toggle="modal" data-target="#myModal">
+            <h5
+              class="text-light"
+              style="font-family: Lato; font-weight: 700; font-size: 18pxrgb;"
+            >
+              Documenting the Real Estate Industry
+            </h5>
+            <p style="font-weight: 400; font-size: 13px">
+              Shift the existing land record to digitally operated land
+              documentation
+            </p>
+            <div class="row">
+              <div class="col-10"></div>
+              <div class="col-2">
+                <span class="" style="font-size: 19px"
+                  ><i class="bi bi-arrow-right-circle"></i
+                ></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-5 m-1 col-md-5 on-hover-whight p-3"
+          style="background-color: rgb; cursor: pointer;"
+            data-toggle="modal" data-target="#myModal">
+            <h5
+              class="text-light"
+              style="font-family: Lato; font-weight: 700; font-size: 18px"
+            >
+              Educating the Stakeholders
+            </h5>
+            <p style="font-weight: 400; font-size: 13px">
+              APREA aims to uplift real estate education in Pakistan
+            </p>
+            <div class="row">
+              <div class="col-10"></div>
+              <div class="col-2">
+                <span class="" style="font-size: 19px"
+                  ><i class="bi bi-arrow-right-circle"></i
+                ></span>
+              </div>
+            </div>
+          </div>
+          <div class="col-5 m-1 col-md-5 on-hover-whight p-3"
+          style="background-color: rgb; cursor: pointer;"
+            data-toggle="modal" data-target="#myModal">
+            <h5
+              class="text-light"
+              style="font-family: Lato; font-weight: 700; font-size: 18px"
+            >
+              Pakistan Real Estate Policy
+            </h5>
+            <p style="font-weight: 400; font-size: 13px">
+              Eliminating the old patwar system with a new land management
+              system
+            </p>
+            <div class="row">
+              <div class="col-10"></div>
+              <div class="col-2">
+                <span class="" style="font-size: 19px"
+                  ><i class="bi bi-arrow-right-circle"></i
+                ></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {%endif%}
+    </div>
+  </div>
+</div>
+
+<section>
+  <div class="container">
+    <div class="row m-md-5 p-3">
+      <div class="col-sm-6 col-md-4 p-md-4">
+        <img
+          class="rounded-3"
+          style="width: 100%; background-color: #17a253"
+          src="{% static 'assets/img/ceo.png' %}"
+          alt=""
+        />
+        <div class="d-flex justify-content-center mt-3">
+          <span class="mt-3">
+            <a href="https://www.facebook.com/dxb.investments" target="_blank"
+              ><i style="font-size: 20px" class="bi bi-facebook p-2"></i></a
+          ></span>
+          <span class="mt-3"
+            ><a
+              href="https://pk.linkedin.com/in/raheem-wyne-8331a319"
+              target="_blank"
+              ><i style="font-size: 20px" class="bi bi-linkedin p-2"></i></a
+          ></span>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-8 mt-3 p-md-4">
+        <h1><b> Abdur Raheem Wyne</b></h1>
+        <h5 style="font-family: Lato">Founder of APREA</h5>
+        <p>
+          Abdur Raheem Wyne has worked relentlessly for the betterment of the
+          real estate industry of Pakistan and society, especially by creating a
+          Pakistan Real Estate Institute to educate the real estate community.
+          As the founder of All Pakistan Real Estate Associations, has been
+          instrumental in fostering transparency by providing license licensing
+          to the brokerage community and membership to all the union,
+          association, and group leaders. <br />
+          He has spent over 18 years in the field, studying and practicing the
+          real estate structures in Gulf & European countries and how they
+          benefit their respective economies. Therefore, he understands the
+          nuances of the real estate industry and its contributions to the
+          national economy. He is also the CEO of a research based firm Rise
+          Marketing Consultants, a company aiming to resolve the complex real
+          estate through their consultancy services. <br />
+          Raheem Wyne strongly believes that Pakistan's real estate market can
+          play a vital role in the financial challenges of Pakistan's
+          government. Therefore, a platform was required to gather the community
+          leaders to contribute to reforms in Real estate national policy <br />
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div
+  class="container rounded-2 py-2"
+  style="background: linear-gradient(235deg, #00234b 2.21%, #01a84b 93.67%)"
+>
+  <div class="row p-5">
+    <div class="py-md-4 col-md-2">
+      <img
+        class="rounded-2"
+        style="width: 100%; height: 250px"
+        src="{% static 'assets/img/mm2.png' %}"
+        alt=""
+      />
+    </div>
+    <div class="py-4 col-md-2">
+      <img
+        class="rounded-2"
+        style="width: 100%; height: 250px"
+        src="{% static 'assets/img/mm1.png' %}"
+        alt=""
+      />
+    </div>
+    <div class="col-md-1"></div>
+    <div class="py-4 col-md-6 p-2 text-light">
+      <h2 class="text-light">
+        <b style="font-family: Lato"> Code of Ethics </b>
+      </h2>
+      <p>
+        APREA is a platform that introduces a code of ethics for the real estate
+        industry, making it simple and easy to follow. <br />
+        As a real estate agent, you know how important it is to be ethical. You
+        understand how your reputation impacts everything from repeat business
+        to client referrals—and even your ability to get hired in the first
+        place. That's why APREA exists: so that you can focus on doing what you
+        do best.
+      </p>
+
+      <form class="form-inline my-2 my-lg-0" style="left: 0; float: left">
+        <a class="btn btn-lg-primary text-dark bg-light" href="">Learn more</a>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!--   ======= Agents Section ======= -->
+<!-- <section class="section-agents section-t4">
+    <div class="container">
+        <div class=" ">
+            <div class="row ">
+                <div class="col-md-12">
+                    <div class="title-wrap d-flex justify-content-between">
+                        <div class="title-box">
+                            <h2 class="title-a  ">Our Team</h2>
+                        </div>
+                   
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+          
+                <div class="col-md-3">
+                    <div class="card-box-d">
+                        <div class="card-img-d">
+                            <img src="{% static 'assets/img/agent-1.jpg' %}" alt="" class="img-d img-fluid rounded-3">
+                        </div>
+                        <div class="card-overlay card-overlay-hover">
+                            <div class="card-header-d">
+                                <div class="card-title-d align-self-center">
+                                    <h3 class="title-d">
+                                        <a href="agent-single.html" class="link-two">Stiven</a>
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="card-body-d">
+                                <p class="content-d color-text-a">
+                                    Sed porttitor
+                                </p>
+                                <div class="info-agents color-a">
+                                    <p>
+                                        <strong>Phone: </strong> +54 356 945234
+                                    </p>
+                                    <p>
+                                        <strong>Email: </strong> agents@example.com
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="card-footer-d">
+                                <div class="socials-footer d-flex justify-content-center">
+                                    <ul class="list-inline">
+                                        <li class="list-inline-item">
+                                            <a href="#" class="link-one">
+                                                <i class="bi bi-facebook" aria-hidden="true"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a href="#" class="link-one">
+                                                <i class="bi bi-twitter" aria-hidden="true"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a href="#" class="link-one">
+                                                <i class="bi bi-instagram" aria-hidden="true"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a href="#" class="link-one">
+                                                <i class="bi bi-linkedin" aria-hidden="true"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card-box-d">
+                        <div class="card-img-d">
+                            <img src="{% static 'assets/img/agent-1.jpg' %}" alt="" class="img-d img-fluid rounded-3">
+                        </div>
+                        <div class="card-overlay card-overlay-hover">
+                            <div class="card-header-d">
+                                <div class="card-title-d align-self-center">
+                                    <h3 class="title-d">
+                                        <a href="agent-single.html" class="link-two">Stiven</a>
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="card-body-d">
+                                <p class="content-d color-text-a">
+                                    Sed porttitor
+                                </p>
+                                <div class="info-agents color-a">
+                                    <p>
+                                        <strong>Phone: </strong> +54 356 945234
+                                    </p>
+                                    <p>
+                                        <strong>Email: </strong> agents@example.com
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="card-footer-d">
+                                <div class="socials-footer d-flex justify-content-center">
+                                    <ul class="list-inline">
+                                        <li class="list-inline-item">
+                                            <a href="#" class="link-one">
+                                                <i class="bi bi-facebook" aria-hidden="true"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a href="#" class="link-one">
+                                                <i class="bi bi-twitter" aria-hidden="true"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a href="#" class="link-one">
+                                                <i class="bi bi-instagram" aria-hidden="true"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a href="#" class="link-one">
+                                                <i class="bi bi-linkedin" aria-hidden="true"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card-box-d">
+                        <div class="card-img-d">
+                            <img src="{% static 'assets/img/agent-1.jpg' %}" alt="" class="img-d img-fluid rounded-3">
+                        </div>
+                        <div class="card-overlay card-overlay-hover">
+                            <div class="card-header-d">
+                                <div class="card-title-d align-self-center">
+                                    <h3 class="title-d">
+                                        <a href="agent-single.html" class="link-two">Stiven</a>
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="card-body-d">
+                                <p class="content-d color-text-a">
+                                    Sed porttitor
+                                </p>
+                                <div class="info-agents color-a">
+                                    <p>
+                                        <strong>Phone: </strong> +54 356 945234
+                                    </p>
+                                    <p>
+                                        <strong>Email: </strong> agents@example.com
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="card-footer-d">
+                                <div class="socials-footer d-flex justify-content-center">
+                                    <ul class="list-inline">
+                                        <li class="list-inline-item">
+                                            <a href="#" class="link-one">
+                                                <i class="bi bi-facebook" aria-hidden="true"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a href="#" class="link-one">
+                                                <i class="bi bi-twitter" aria-hidden="true"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a href="#" class="link-one">
+                                                <i class="bi bi-instagram" aria-hidden="true"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a href="#" class="link-one">
+                                                <i class="bi bi-linkedin" aria-hidden="true"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card-box-d">
+                        <div class="card-img-d">
+                            <img src="{% static 'assets/img/agent-1.jpg' %}" alt="" class="img-d img-fluid rounded-3">
+                        </div>
+                        <div class="card-overlay card-overlay-hover">
+                            <div class="card-header-d">
+                                <div class="card-title-d align-self-center">
+                                    <h3 class="title-d">
+                                        <a href="agent-single.html" class="link-two">Stiven</a>
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="card-body-d">
+                                <p class="content-d color-text-a">
+                                    Sed porttitor
+                                </p>
+                                <div class="info-agents color-a">
+                                    <p>
+                                        <strong>Phone: </strong> +54 356 945234
+                                    </p>
+                                    <p>
+                                        <strong>Email: </strong> agents@example.com
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="card-footer-d">
+                                <div class="socials-footer d-flex justify-content-center">
+                                    <ul class="list-inline">
+                                        <li class="list-inline-item">
+                                            <a href="#" class="link-one">
+                                                <i class="bi bi-facebook" aria-hidden="true"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a href="#" class="link-one">
+                                                <i class="bi bi-twitter" aria-hidden="true"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a href="#" class="link-one">
+                                                <i class="bi bi-instagram" aria-hidden="true"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a href="#" class="link-one">
+                                                <i class="bi bi-linkedin" aria-hidden="true"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+
+    </div>
+</section> -->
+<!-- End Agents Section -->
+
+<div class="mt-5">
+  <div class="container py-5">
+    <div class="row pt-4">
+      <div class="text-center py-4">
+        <h1>
+          <b> APREA’s Strategic Action Plan </b>
+        </h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="mt-5 col-md-6 pl-md-5">
+        <div class="pl-md-5">
+          <div
+            class="p-5 pl-md-5 pr-md-5"
+            style="background: #00234b; border-radius: 9px"
+          >
+            <div class="pb-2">
+              <h3 class="text-light">
+                <b style="font-family: lato"> Membership </b>
+              </h3>
+              <p style="font-size: 14" class="text-light">
+                All the union leaders, associations, and group leaders will be
+                considered members of All Pakistan Real Estate Associations.
+                They can further make necessary efforts to promote licensing for
+                the brokers working within their territory endorsed and issues
+                by APREA. They can participate in all conferences and seminars
+                held under APREA’s platform.
+              </p>
+              <a class="btn btn-lg-primary text-dark bg-light" href=""
+                >Learn more</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mt-5 col-md-6 pr-md-5">
+        <div class="pl-md-5">
+          <div
+            class="p-5 pl-md-5 pr-md-5"
+            style="background: #01694f; border-radius: 9px"
+          >
+            <div class="py-2">
+              <h3 class="text-light">
+                <b style="font-family: lato"> License </b>
+              </h3>
+              <p style="font-size: 14" class="text-light">
+                APREA’s main purpose is to bring all the brokerage communities
+                represented by their respective leaders under one platform to
+                license them, which will directly affect the real estate
+                industry. Furthermore, APREA will organize, educate and bring
+                transparency to the brokerage community across Pakistan.
+              </p>
+              <a class="btn btn-lg-primary text-dark bg-light" href=""
+                >Learn more</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="p-md-5">
+  <nav>
+    <div
+      class="report-border nav px-md-5 topnav d-flex justify-content-around"
+      id=" pills-tabpills-tab"
+      role="tablist"
+    >
+      {% if user.email %}
+      <a
+        style="font-weight: 600; color: black; font-size: 20px"
+        class="report-font nav-item nav-link"
+        id="nav-profile-tab"
+        data-toggle="tab"
+        href="#nav-profile"
+        role="tab"
+        aria-controls="nav-profile"
+        aria-selected="false"
+        >Research Reports</a
+      >
+      {% else %}
+      <a
+        style="font-weight: 600; color: black; font-size: 20px; cursor: pointer"
+        class="report-font nav-item nav-link"
+        data-toggle="modal"
+        data-target="#myModal"
+        role="tab"
+        aria-selected="false"
+        >Research Reports</a
+      >
+
+      {% endif %}
+      <a
+        style="font-weight: 600; color: black; font-size: 20px"
+        class="nav-item nav-link active"
+        id="nav-home-tab"
+        data-toggle="tab"
+        href="#nav-home"
+        role="tab"
+        aria-controls="nav-home"
+        aria-selected="true"
+        >Articles</a
+      >
+
+      <a
+        style="font-weight: 600; color: black; font-size: 20px"
+        class="nav-item nav-link"
+        id="nav-contact-tab"
+        data-toggle="tab"
+        href="#nav-contact"
+        role="tab"
+        aria-controls="nav-contact"
+        aria-selected="false"
+        >Publications</a
+      >
+    </div>
+  </nav>
+
+  <div class="container pt-md-5 tab-content" id="nav-tabContent">
+    <div
+      class="tab-pane fade"
+      id="nav-profile"
+      role="tabpanel"
+      aria-labelledby="nav-profile-tab"
+    >
+      <div class="container">
+        <div class="row px-4">
+          <div class="col-md-3">
+            <div class="row py-4">
+              <img
+                style="width: 100%; height: 300px"
+                src="{% static 'assets/img/minar-6.png' %}"
+                alt=""
+              />
+              <div
+                style="font-size: 11px; font-weight: 200"
+                class="col-12 pt-2"
+              >
+                <i class="bi bi-person"></i> <span class="pr-4">Admin</span>
+                <i class="pl-4 bi bi-chat-dots"></i>
+                <span>0 Comments</span>
+              </div>
+              <div class="col-6"></div>
+              <div class="p-2">
+                <h2 style="font-size: 18px; font-weight: 700" class="pr-2">
+                  Standard size of business agency Consulating Management.
+                </h2>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="row py-4">
+              <img
+                style="width: 100%; height: 300px"
+                src="{% static 'assets/img/minar-6.png' %}"
+                alt=""
+              />
+              <div
+                style="font-size: 11px; font-weight: 200"
+                class="col-12 pt-2"
+              >
+                <i class="bi bi-person"></i> <span class="pr-4">Admin</span>
+                <i class="pl-4 bi bi-chat-dots"></i>
+                <span>0 Comments</span>
+              </div>
+              <div class="col-6"></div>
+              <div class="p-2">
+                <h2 style="font-size: 18px; font-weight: 700" class="pr-2">
+                  Standard size of business agency Consulating Management.
+                </h2>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="row py-4">
+              <img
+                style="width: 100%; height: 300px"
+                src="{% static 'assets/img/minar-7.png' %}"
+                alt=""
+              />
+              <div
+                style="font-size: 11px; font-weight: 200"
+                class="col-12 pt-2"
+              >
+                <i class="bi bi-person"></i> <span class="pr-4">Admin</span>
+                <i class="pl-4 bi bi-chat-dots"></i>
+                <span>0 Comments</span>
+              </div>
+              <div class="col-6"></div>
+              <div class="p-2">
+                <h2 style="font-size: 18px; font-weight: 700" class="pr-2">
+                  Standard size of business agency Consulating Management.
+                </h2>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="row py-4">
+              <img
+                style="width: 100%; height: 300px"
+                src="{% static 'assets/img/minar-8.png' %}"
+                alt=""
+              />
+              <div
+                style="font-size: 11px; font-weight: 200"
+                class="col-12 pt-2"
+              >
+                <i class="bi bi-person"></i> <span class="pr-4">Admin</span>
+                <i class="pl-4 bi bi-chat-dots"></i>
+                <span>0 Comments</span>
+              </div>
+              <div class="col-6"></div>
+              <div class="p-2">
+                <h2 style="font-size: 18px; font-weight: 700" class="pr-2">
+                  Standard size of business agency Consulating Management.
+                </h2>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="row py-4">
+              <img
+                style="width: 100%; height: 300px"
+                src="{% static 'assets/img/minar-6.png' %}"
+                alt=""
+              />
+              <div
+                style="font-size: 11px; font-weight: 200"
+                class="col-12 pt-2"
+              >
+                <i class="bi bi-person"></i> <span class="pr-4">Admin</span>
+                <i class="pl-4 bi bi-chat-dots"></i>
+                <span>0 Comments</span>
+              </div>
+              <div class="col-6"></div>
+              <div class="p-2">
+                <h2 style="font-size: 18px; font-weight: 700" class="pr-2">
+                  Standard size of business agency Consulating Management.
+                </h2>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="row py-4">
+              <img
+                style="width: 100%; height: 300px"
+                src="{% static 'assets/img/minar-6.png' %}"
+                alt=""
+              />
+              <div
+                style="font-size: 11px; font-weight: 200"
+                class="col-12 pt-2"
+              >
+                <i class="bi bi-person"></i> <span class="pr-4">Admin</span>
+                <i class="pl-4 bi bi-chat-dots"></i>
+                <span>0 Comments</span>
+              </div>
+              <div class="col-6"></div>
+              <div class="p-2">
+                <h2 style="font-size: 18px; font-weight: 700" class="pr-2">
+                  Standard size of business agency Consulating Management.
+                </h2>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="row py-4">
+              <img
+                style="width: 100%; height: 300px"
+                src="{% static 'assets/img/minar-7.png' %}"
+                alt=""
+              />
+              <div
+                style="font-size: 11px; font-weight: 200"
+                class="col-12 pt-2"
+              >
+                <i class="bi bi-person"></i> <span class="pr-4">Admin</span>
+                <i class="pl-4 bi bi-chat-dots"></i>
+                <span>0 Comments</span>
+              </div>
+              <div class="col-6"></div>
+              <div class="p-2">
+                <h2 style="font-size: 18px; font-weight: 700" class="pr-2">
+                  Standard size of business agency Consulating Management.
+                </h2>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="row py-4">
+              <img
+                style="width: 100%; height: 300px"
+                src="{% static 'assets/img/minar-8.png' %}"
+                alt=""
+              />
+              <div
+                style="font-size: 11px; font-weight: 200"
+                class="col-12 pt-2"
+              >
+                <i class="bi bi-person"></i> <span class="pr-4">Admin</span>
+                <i class="pl-4 bi bi-chat-dots"></i>
+                <span>0 Comments</span>
+              </div>
+              <div class="col-6"></div>
+              <div class="p-2">
+                <h2 style="font-size: 18px; font-weight: 700" class="pr-2">
+                  Standard size of business agency Consulating Management.
+                </h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="tab-pane fade show active"
+      id="nav-home"
+      role="tabpanel"
+      aria-labelledby="nav-home-tab"
+    >
+      <div>
+        <div class=" ">
+          <div class="row mx-2">
+            <div class="col-md-5 py-5 px-md-4">
+              <h1 style="font-weight: 700" class="py-2 pr-md-1 pt-md-5">
+                Gain Market Insights
+              </h1>
+              <p class="pr-md-3">
+                The real estate industry is a massive, growing market. It is
+                estimated that Pakistan has an annual trade of 2000 billion in
+                real estate.
+              </p>
+              <p class="pr-md-3">
+                Therefore, APREA provides access to valuable information about
+                this market and how you can gain insight into what's happening
+                in it.
+              </p>
+            </div>
+            <div class="col-md-7 py-2 px-md-4">
+              <div class="">
+                <div class="row">
+                  {% for i in articals%}
+                  <div class="col-md-6 p-2">
+                    <a href="articals/{{i.id}}/">
+                      <div class="card">
+                        <img
+                          style="height: 180px"
+                          src="{{i.picture}}"
+                          class="card-img-top"
+                          alt="..."
+                        />
+                        <div class="card-body">
+                          <h5 class="card-title">
+                            <b style="font-family: lato">{{i.title}}</b>
+                          </h5>
+                          <p
+                            style="
+                              display: block;
+                              height: 50px;
+                              overflow: hidden;
+                              text-overflow: ellipsis;
+                            "
+                            class="card-text"
+                          >
+                            {{i.discription}}
+                          </p>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  {%endfor%}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row mx-2 row-cols-1 row-cols-md-2 g-4">
+          {%for d in articals1%}
+          <div class="col-md-3">
+            <a href="articals/{{d.id}}/">
+              <div class="card">
+                <img src="{{d.picture}}" class="card-img-top" alt="..." />
+                <div class="card-body">
+                  <h5 class="card-title">
+                    <b style="font-family: lato"> {{d.title}}</b>
+                  </h5>
+                  <p
+                    style="
+                      display: block;
+                      height: 50px;
+                      overflow: hidden;
+                      text-overflow: ellipsis;
+                    "
+                    class="card-text"
+                  >
+                    {{d.discription}}
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+          {%endfor%}
+        </div>
+      </div>
+    </div>
+    <div
+      class="tab-pane fade"
+      id="nav-contact"
+      role="tabpanel"
+      aria-labelledby="nav-contact-tab"
+    >
+      <div class="container">
+        <div class="row mt-4">
+          {%for pub in publications%}
+          <div class="col-sm-6 col-md-3 p-2">
+            <div
+              class="text-light h-3"
+              style="border: none; background: transparent"
+            >
+              <a href="/publications/{{pub.id}}/">
+                <img style="width: 100%; height: 13rem" src="{{pub.picture}}"
+              /></a>
+            </div>
+            <div class="h-3" style="border: none; background: transparent">
+              <a href="/publications/{{pub.id}}/"> {{pub.title}}</a>
+            </div>
+          </div>
+          {%endfor%}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="col-md-12 about-team-r">
+            <div class="row align-items-center justify-content-center">
+              <div class="col-md-7">
+                <h3 class="h2 text-success"> <b>Sign In</b> <strong></strong></h3>
+                <p class="mb-4">If you have an account, sign in with your email address.</p>
+                <form method="post">
+                  {% csrf_token %}
+                  <div class="form-group first">
+                    <label for="username"> <b> Email </b> </label>
+                    <input type="text" class="form-control" placeholder="your-email@gmail.com" name="email" id="username" required>
+                  </div>
+                  <div class="form-group last mb-3">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" placeholder="Your Password" minlength="1" name="password" id="password" required>
+                  </div>
+                  <div class="d-flex mb-5 align-items-center">
+                    <label class="control control--checkbox mb-0"><span class="caption">Remember
+                        me</span>
+                      <input type="checkbox" checked="checked" />
+                      <div class="control__indicator"></div> 
+                    </label>
+                    <span class="ml-auto"><a href="#" class="forgot-pass">Forgot Password</a></span>
+                  </div>
+                  <input type="submit" value="Sign in" onclick="hash()" class="btn btn-block btn-success">
+                  {%include './messages.html'%}
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+       
+    </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script>
+<script>
+  function hash()
+  {
+    pass= document.getElementById("password").value;
+    var hash = CryptoJS.MD5(pass);
+    document.getElementById('password').value=hash;
+  }
+</script>
+
+{% endblock content %}

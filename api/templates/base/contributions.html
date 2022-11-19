@@ -1,0 +1,590 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+Contributionspage - APREA
+{% endblock title %}
+
+{% block content %}
+ 
+</div>
+
+
+
+</div>
+<div class="container mt-5 "
+    style=" border-radius:11px; background: linear-gradient(235deg, #00234B 2.21%, #01A84B 93.67%);">
+    <div class="row">
+        <div style="padding:0 ;" class="col-md-6">
+
+            <img style="border-radius:0 0 0 11px; background-position:left bottom; margin-bottom: 0;"
+                src="{% static 'assets/img/pz-1.png' %}" alt="" class=" img-d img-fluid">
+        </div>
+        <div class="col-md-6 p-3">
+            <div class="m-5">
+                <h1 class="text-light pz-heading ">
+                    <b> Pakistan Real Estate <br>
+                    Policy</b>
+                </h1>
+
+                <p style="font-size: 13px;" class=" text-light ">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                    commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                    velit esse cillum dolore eu fugiat nulla pariatur.
+                </p>
+                {%if user.email %}
+                <div class="btn btn-lg-primary bg-light" style="border: none;"><a href="{%url 'pakistan_rep'%}">Learn More </a></div>
+                {%else%}
+                <div class="btn btn-lg-primary bg-light" style="border: none;" data-toggle="modal" data-target="#myModal">Learn More</div>
+                {%endif%}
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="container mt-5 "
+    style=" border-radius:11px; background: linear-gradient(235deg, #00234B 2.21%, #01A84B 93.67%);">
+    <div class="row">
+        <div class="col-md-6 p-3">
+            <div class="m-5">
+                <h1 class="text-light ">
+                    <b>Registering <br>
+                        the Brokers</b>
+                </h1>
+
+                <p style="font-size: 13px;" class=" text-light ">
+                    In Pakistan, currently there is no mechanism for licensing the brokers  
+                    working as the lower tier of the real estate industry. A big reason behind 
+                    is the absence of a regulatory body for regularizing the working of real estate 
+                    industry. Selfly developed brokers, coming from diversified backgrounds, are 
+                    working in the industry, even without having expertise in the said field. 
+                </p>
+                {%if user.email %}
+                <div class="btn btn-lg-primary bg-light" style="border: none;"><a href="{%url 'licensing_brokers'%}">Learn More </a></div>
+                {%else%}
+                <div class="btn btn-lg-primary bg-light" style="border: none;" data-toggle="modal" data-target="#myModal">Learn More</div>
+                {%endif%}
+            </div>
+
+        </div>
+        <div style="padding:0 ;" class="col-md-6">
+
+            <img style="border-radius:0 0 0 11px; background-position:left bottom; margin-bottom: 0;"
+                src="{% static 'assets/img/pz-3.png' %}" alt="" class=" img-d img-fluid">
+        </div>
+
+    </div>
+</div>
+<div class="container mt-5 "
+    style=" border-radius:11px; background: linear-gradient(235deg, #00234B 2.21%, #01A84B 93.67%);">
+    <div class="row">
+        <div style="padding:0 ;" class="col-md-6">
+
+            <img style="border-radius:0 0 0 11px; background-position:left bottom; margin-bottom: 0;"
+                src="{% static 'assets/img/pz-2.png' %}" alt="" class=" img-d img-fluid">
+        </div>
+        <div class="col-md-6 p-3">
+            <div class="m-5">
+                <h1 class="text-light ">
+                    <b>Documenting <br>
+                        Real Estate Industry</b>
+                </h1>
+
+                <p style="font-size: 13px;" class=" text-light ">
+                    The documentation matters for real estate industry in Pakistan 
+                    is majorly dealt  by the revenue department. The department has 
+                    set its organizational structure for processing the transference of 
+                    ownership rights for properties and several other documentations
+                    for the real estate.
+                </p>
+                {%if user.email %}
+                <div class="btn btn-lg-primary bg-light" style="border: none;"><a href="{%url 'documenting_rei'%}">Learn More </a></div>
+                {%else%}
+                <div class="btn btn-lg-primary bg-light" style="border: none;" data-toggle="modal" data-target="#myModal">Learn More</div>
+                {%endif%}
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="container mt-5 "
+    style=" border-radius:11px; background: linear-gradient(235deg, #00234B 2.21%, #01A84B 93.67%);">
+    <div class="row">
+        <div class="col-md-6 p-3">
+            <div class="m-5">
+                <h1 class="text-light ">
+                    <b>Educating <br>
+                        Stakeholders</b>
+                </h1>
+
+                <p style="font-size: 13px;" class=" text-light ">
+                    Currrently, Pakistan lacks in having a developed structure for 
+                    provision of real estate education in the country. There are 
+                    very few institutes in the country providing education related 
+                    to real estate and are insufficient to cope up with the population
+                    extent, deserving to be provided education in the said field. 
+                </p>
+                {%if user.email %}
+                <div class="btn btn-lg-primary bg-light" style="border: none;"><a href="{%url 'education_stakeholders'%}">Learn More </a></div>
+                {%else%}
+                <div class="btn btn-lg-primary bg-light" style="border: none;" data-toggle="modal" data-target="#myModal">Learn More</div>
+                {%endif%}
+            </div>
+
+        </div>
+        <div style="padding:0 ;" class="col-md-6">
+
+            <img style="border-radius:0 0 0 11px; background-position:left bottom; margin-bottom: 0;"
+                src="{% static 'assets/img/pz-4.png' %}" alt="" class=" img-d img-fluid">
+        </div>
+
+    </div>
+</div>
+
+
+{% comment %} <div class="container"> </div>
+
+  <div class="container">
+    <div class="row py-5">
+        <div class="col-md-7 my-5 py-5">
+            <div>
+                <h1 style="font-weight: 700;">
+                    Existing Brokerage Model in Pakistan
+                </h1>
+                <div class="pt-5 pb-2">
+                    <span> <img style="height:12px ;width: 12px;" src="{% static 'assets/img/Vector-right.png' %}"
+                            alt="">
+                    </span>
+                    <span>
+                        Currently, there is no licensing system for real estate brokerage community in Pakistan.
+                    </span>
+                </div>
+                <div>
+                    <span> <img style="height:12px ;width: 12px;" src="{% static 'assets/img/Vector-right.png' %}"
+                            alt="">
+                    </span>
+                    <span>
+                        Brokers work independently without any monitoring or regulations. </span>
+                </div>
+                <div class="py-2">
+                    <span> <img style="height:12px ;width: 12px;" src="{% static 'assets/img/Vector-right.png' %}"
+                            alt="">
+                    </span>
+                    <span>
+                        This lead to uncontrolled extent of brokerage community because any one can become one. </span>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-5">
+            <img class="p-4" style="height:400px ;width: 400px;" src="{% static 'assets/img/money.png' %}" alt="">
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-1"></div>
+        <div class="col-10">
+            <img style="height:500px ;width: 100%;" src="{% static 'assets/img/broblems.png' %}" alt="">
+        </div>
+        <div class="col-1"></div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row py-5">
+        <div class="col-md-7 my-5 py-5">
+            <div>
+                <h1 style="font-weight: 700;">
+                    Importance of License </h1>
+                <div class="pt-5 pb-2">
+                    <span> <img style="height:12px ;width: 12px;" src="{% static 'assets/img/Vector-right.png' %}"
+                            alt="">
+                    </span>
+                    <span>
+                        Reduce the risk involved in doing business </span>
+                </div>
+                <div>
+                    <span> <img style="height:12px ;width: 12px;" src="{% static 'assets/img/Vector-right.png' %}"
+                            alt="">
+                    </span>
+                    <span>
+                        Restrict professional practices to qualified personnel’s </span>
+                </div>
+                <div class="py-2">
+                    <span> <img style="height:12px ;width: 12px;" src="{% static 'assets/img/Vector-right.png' %}"
+                            alt="">
+                    </span>
+                    <span>
+                        Devised standard procedures for operating in a specific domains
+                </div>
+                <div class="py-2">
+                    <span> <img style="height:12px ;width: 12px;" src="{% static 'assets/img/Vector-right.png' %}"
+                            alt="">
+                    </span>
+                    <span>
+                        Standardizations of educational background and work experience for
+                        obtaining legal background for working
+                </div>
+                <div class="py-2">
+                    <span> <img style="height:12px ;width: 12px;" src="{% static 'assets/img/Vector-right.png' %}"
+                            alt="">
+                    </span>
+                    <span>
+                        Validation of skills through standardized testing
+                </div>
+            </div>
+        </div>
+        <div class="col-md-5 pt-5">
+            <img class="p-4 mt-5" style="height:300px ;width: 400px;" src="{% static 'assets/img/lock.png' %}" alt="">
+        </div>
+    </div>
+</div>
+
+
+<div class="container-fluid " style="background: linear-gradient(97.7deg, #00234B 19.21%, #01A84B 93.67%);">
+    <div class="container">
+        <div class="row  mx-md-2  py-5">
+            <div class="row ">
+                <div class="col-12  my-5 ">
+                    <h2 class="text-light" style="font-size: 39px; text-align: center;">
+                        <b>Agenda of APREA</b>
+                    </h2>
+                </div>
+            </div>
+            <div class="container">
+                <div class="px-md-5 mx-md-5">
+                    <div class="row mx-md-5 p-md-3">
+
+
+
+                        <div class=" col-md-3 col-6   my-1">
+                            <div class="rounded-2  bg-light"
+                                style="margin:0 auto;border: 1px solid rgba(255, 255, 255, 0.4);width: fit-content;">
+                                <img class="" style="width: 100%; height: 100%;"
+                                    src="{% static 'assets/img/tick.png' %}" alt="">
+                            </div>
+                        </div>
+                        <div class=" col-md-3 col-6   my-1">
+                            <div class="rounded-2  bg-light"
+                                style="margin:0 auto;border: 1px solid rgba(255, 255, 255, 0.4);width: fit-content;">
+                                <img class="p-2" style="width: 100%; height: 100%;"
+                                    src="{% static 'assets/img/tick-1.png' %}" alt="">
+                            </div>
+                        </div>
+                        <div class=" col-md-3 col-6   my-1">
+                            <div class="rounded-2  bg-light"
+                                style="margin:0 auto;border: 1px solid rgba(255, 255, 255, 0.4);width: fit-content;">
+                                <img class="p-2" style="width: 100%; height: 100%;"
+                                    src="{% static 'assets/img/tick-2.png' %}" alt="">
+                            </div>
+                        </div>
+                        <div class=" col-md-3 col-6   my-1">
+                            <div class="rounded-2  bg-light"
+                                style="margin:0 auto;border: 1px solid rgba(255, 255, 255, 0.4);width: fit-content;">
+                                <img class="p-2" style="width: 100%; height: 100%;"
+                                    src="{% static 'assets/img/tick-3.png' %}" alt="">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="row py-5">
+        <div class="col-md-2 my-5 py-5">
+
+        </div>
+        <div class="col-md-10 pt-5">
+            <img class="p-4 mt-5" style="height:600px ;width: 100%;" src="{% static 'assets/img/Mech-Line.png' %}"
+                alt="">
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid pt-5"
+    style=" background-repeat:no-repeat; -webkit-background-size:cover; -moz-background-size:cover;
+   -o-background-size:cover; background-size:cover; background-position:center; background-image: url({% static 'assets/img/Affect-png.png' %})">
+    <div class="row  py-md-5">
+        <div class="col-md-1"></div>
+        <div class="col-md-5">
+            <div>
+                <h1 style="font-weight: 700;">
+                    Affects </h1>
+                <div class="pt-5 pb-2">
+                    <span> <img style="height:12px ;width: 12px;" src="{% static 'assets/img/Vector-right.png' %}"
+                            alt="">
+                    </span>
+                    <span>Regularize brokerage community </span>
+                </div>
+                <div>
+                    <span> <img style="height:12px ;width: 12px;" src="{% static 'assets/img/Vector-right.png' %}"
+                            alt="">
+                    </span>
+                    <span>Regularize brokerage community</span>
+                </div>
+                <div class="py-2">
+                    <span> <img style="height:12px ;width: 12px;" src="{% static 'assets/img/Vector-right.png' %}"
+                            alt="">
+                    </span>
+                    <span>Developed mechanism for tracking transaction </span>
+                </div>
+                <div class="py-2">
+                    <span> <img style="height:12px ;width: 12px;" src="{% static 'assets/img/Vector-right.png' %}"
+                            alt="">
+                    </span>
+                    <span>
+                        Lessened fraudlent activity threats </span>
+                </div>
+                <div class="py-2">
+                    <span> <img style="height:12px ;width: 12px;" src="{% static 'assets/img/Vector-right.png' %}"
+                            alt="">
+                    </span>
+                    <span>Pre decided valuation for commission percentage of each transmission</span>
+                </div>
+                <div class="py-2">
+                    <span> <img style="height:12px ;width: 12px;" src="{% static 'assets/img/Vector-right.png' %}"
+                            alt="">
+                    </span>
+                    <span>A platform for dealing with the problems of both brokers and interested
+                        parties.</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6"></div>
+
+    </div>
+</div>  
+
+
+ <div class="container-fluid">
+
+    <div class="row bg-light">
+        <div class="container p-5">
+
+            <div class="row p-md-5">
+                <div class="col-12  p-md-5">
+                    <img src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp"
+                        class="shadow-1-strong mb-4" style="width: 100%;height: 600px; border-radius: 10px;"
+                        alt="Boat on Calm Water" />
+                </div>
+                <div class="col-12 col-md-8 pl-md-5 py-3">
+                    <h3>Standard Size of Business Agency Consulting Alouas Atom Management</h3>
+                </div>
+
+                <div class="col-12 col-md-8 pl-md-5">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam accumsan ipsum tellus, in laoreet
+                        tellus pulvinar nec. Suspendisse pellentesque finibus dolor nec pharetra. Nam massa quam,
+                        lobortis vel arcu at, malesuada pharetra velit. Aenean condimentum felis nunc, in mattis est
+                        congue tempus. Vestibulum finibus dictum purus, eget tincidunt orci dignissim non. Donec pretium
+                        quam velit, varius semper augue venenatis eu. Ut nec eros accumsan, pellentesque sapien nec,
+                        consectetur nisl. Orci varius natoque penatibus et magnis dis parturient montes, nascetur
+                        ridiculus mus.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam accumsan ipsum
+                        tellus, in laoreet tellus pulvinar nec. Suspendisse pellentesque finibus dolor nec pharetra. Nam
+                        massa quam, lobortis vel arcu at, malesuada pharetra velit. Aenean condimentum felis nunc, in
+                        mattis est congue tempus. Vestibulum finibus dictum purus, eget tincidunt orci dignissim non.
+                        Donec pretium quam velit, varius semper augue venenatis eu. Ut nec eros accumsan, pellentesque
+                        sapien nec, consectetur nisl. Orci varius natoque penatibus et magnis dis parturient montes,
+                        nascetur ridiculus mus.</p>
+                </div>
+
+                <div class="col-md-8 pl-md-5">
+                    <img src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp"
+                        class="shadow-1-strong mb-4" style="width: 100%;height: 300px; border-radius: 10px;"
+                        alt="Boat on Calm Water" />
+                </div>
+                <div class="col-12 col-md-8 pl-md-5 py-3">
+                    <h3>Standard Size of Business Agency Consulting Alouas Atom Management</h3>
+                </div>
+
+                <div class="col-12 col-md-8 pl-md-5">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam accumsan ipsum tellus, in laoreet
+                        tellus pulvinar nec. Suspendisse pellentesque finibus dolor nec pharetra. Nam massa quam,
+                        lobortis vel arcu at, malesuada pharetra velit. Aenean condimentum felis nunc, in mattis est
+                        congue tempus. Vestibulum finibus dictum purus, eget tincidunt orci dignissim non. Donec pretium
+                        quam velit, varius semper augue venenatis eu. Ut nec eros accumsan, pellentesque sapien nec,
+                        consectetur nisl. Orci varius natoque penatibus et magnis dis parturient montes, nascetur
+                        ridiculus mus.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam accumsan ipsum
+                        tellus, in laoreet tellus pulvinar nec. Suspendisse pellentesque finibus dolor nec pharetra. Nam
+                        massa quam, lobortis vel arcu at, malesuada pharetra velit. Aenean condimentum felis nunc, in
+                        mattis est congue tempus. Vestibulum finibus dictum purus, eget tincidunt orci dignissim non.
+                        Donec pretium quam velit, varius semper augue venenatis eu. Ut nec eros accumsan, pellentesque
+                        sapien nec, consectetur nisl. Orci varius natoque penatibus et magnis dis parturient montes,
+                        nascetur ridiculus mus.</p>
+                </div>
+
+            </div>
+
+            <div class="row p-md-5">
+                <div class="col-12  p-md-5">
+                    <img src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp"
+                        class="shadow-1-strong mb-4" style="width: 100%;height: 600px; border-radius: 10px;"
+                        alt="Boat on Calm Water" />
+                </div>
+                <div class="col-12 col-md-8 pl-md-5 py-3">
+                    <h3>Standard Size of Business Agency Consulting Alouas Atom Management</h3>
+                </div>
+
+                <div class="col-12 col-md-8 pl-md-5">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam accumsan ipsum tellus, in laoreet
+                        tellus pulvinar nec. Suspendisse pellentesque finibus dolor nec pharetra. Nam massa quam,
+                        lobortis vel arcu at, malesuada pharetra velit. Aenean condimentum felis nunc, in mattis est
+                        congue tempus. Vestibulum finibus dictum purus, eget tincidunt orci dignissim non. Donec pretium
+                        quam velit, varius semper augue venenatis eu. Ut nec eros accumsan, pellentesque sapien nec,
+                        consectetur nisl. Orci varius natoque penatibus et magnis dis parturient montes, nascetur
+                        ridiculus mus.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam accumsan ipsum
+                        tellus, in laoreet tellus pulvinar nec. Suspendisse pellentesque finibus dolor nec pharetra. Nam
+                        massa quam, lobortis vel arcu at, malesuada pharetra velit. Aenean condimentum felis nunc, in
+                        mattis est congue tempus. Vestibulum finibus dictum purus, eget tincidunt orci dignissim non.
+                        Donec pretium quam velit, varius semper augue venenatis eu. Ut nec eros accumsan, pellentesque
+                        sapien nec, consectetur nisl. Orci varius natoque penatibus et magnis dis parturient montes,
+                        nascetur ridiculus mus.</p>
+                </div>
+
+                <div class="col-md-8 pl-md-5">
+                    <img src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp"
+                        class="shadow-1-strong mb-4" style="width: 100%;height: 300px; border-radius: 10px;"
+                        alt="Boat on Calm Water" />
+                </div>
+                <div class="col-12 col-md-8 pl-md-5 py-3">
+                    <h3>Standard Size of Business Agency Consulting Alouas Atom Management</h3>
+                </div>
+
+                <div class="col-12 col-md-8 pl-md-5">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam accumsan ipsum tellus, in laoreet
+                        tellus pulvinar nec. Suspendisse pellentesque finibus dolor nec pharetra. Nam massa quam,
+                        lobortis vel arcu at, malesuada pharetra velit. Aenean condimentum felis nunc, in mattis est
+                        congue tempus. Vestibulum finibus dictum purus, eget tincidunt orci dignissim non. Donec pretium
+                        quam velit, varius semper augue venenatis eu. Ut nec eros accumsan, pellentesque sapien nec,
+                        consectetur nisl. Orci varius natoque penatibus et magnis dis parturient montes, nascetur
+                        ridiculus mus.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam accumsan ipsum
+                        tellus, in laoreet tellus pulvinar nec. Suspendisse pellentesque finibus dolor nec pharetra. Nam
+                        massa quam, lobortis vel arcu at, malesuada pharetra velit. Aenean condimentum felis nunc, in
+                        mattis est congue tempus. Vestibulum finibus dictum purus, eget tincidunt orci dignissim non.
+                        Donec pretium quam velit, varius semper augue venenatis eu. Ut nec eros accumsan, pellentesque
+                        sapien nec, consectetur nisl. Orci varius natoque penatibus et magnis dis parturient montes,
+                        nascetur ridiculus mus.</p>
+                </div>
+
+            </div>
+
+            <div class="row p-md-5">
+                <div class="col-12  p-md-5">
+                    <img src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp"
+                        class="shadow-1-strong mb-4" style="width: 100%;height: 600px; border-radius: 10px;"
+                        alt="Boat on Calm Water" />
+                </div>
+                <div class="col-12 col-md-8 pl-md-5 py-3">
+                    <h3>Standard Size of Business Agency Consulting Alouas Atom Management</h3>
+                </div>
+
+                <div class="col-12 col-md-8 pl-md-5">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam accumsan ipsum tellus, in laoreet
+                        tellus pulvinar nec. Suspendisse pellentesque finibus dolor nec pharetra. Nam massa quam,
+                        lobortis vel arcu at, malesuada pharetra velit. Aenean condimentum felis nunc, in mattis est
+                        congue tempus. Vestibulum finibus dictum purus, eget tincidunt orci dignissim non. Donec pretium
+                        quam velit, varius semper augue venenatis eu. Ut nec eros accumsan, pellentesque sapien nec,
+                        consectetur nisl. Orci varius natoque penatibus et magnis dis parturient montes, nascetur
+                        ridiculus mus.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam accumsan ipsum
+                        tellus, in laoreet tellus pulvinar nec. Suspendisse pellentesque finibus dolor nec pharetra. Nam
+                        massa quam, lobortis vel arcu at, malesuada pharetra velit. Aenean condimentum felis nunc, in
+                        mattis est congue tempus. Vestibulum finibus dictum purus, eget tincidunt orci dignissim non.
+                        Donec pretium quam velit, varius semper augue venenatis eu. Ut nec eros accumsan, pellentesque
+                        sapien nec, consectetur nisl. Orci varius natoque penatibus et magnis dis parturient montes,
+                        nascetur ridiculus mus.</p>
+                </div>
+
+                <div class="col-md-8 pl-md-5">
+                    <img src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp"
+                        class="shadow-1-strong mb-4" style="width: 100%;height: 300px; border-radius: 10px;"
+                        alt="Boat on Calm Water" />
+                </div>
+                <div class="col-12 col-md-8 pl-md-5 py-3">
+                    <h3>Standard Size of Business Agency Consulting Alouas Atom Management</h3>
+                </div>
+
+                <div class="col-12 col-md-8 pl-md-5">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam accumsan ipsum tellus, in laoreet
+                        tellus pulvinar nec. Suspendisse pellentesque finibus dolor nec pharetra. Nam massa quam,
+                        lobortis vel arcu at, malesuada pharetra velit. Aenean condimentum felis nunc, in mattis est
+                        congue tempus. Vestibulum finibus dictum purus, eget tincidunt orci dignissim non. Donec pretium
+                        quam velit, varius semper augue venenatis eu. Ut nec eros accumsan, pellentesque sapien nec,
+                        consectetur nisl. Orci varius natoque penatibus et magnis dis parturient montes, nascetur
+                        ridiculus mus.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam accumsan ipsum
+                        tellus, in laoreet tellus pulvinar nec. Suspendisse pellentesque finibus dolor nec pharetra. Nam
+                        massa quam, lobortis vel arcu at, malesuada pharetra velit. Aenean condimentum felis nunc, in
+                        mattis est congue tempus. Vestibulum finibus dictum purus, eget tincidunt orci dignissim non.
+                        Donec pretium quam velit, varius semper augue venenatis eu. Ut nec eros accumsan, pellentesque
+                        sapien nec, consectetur nisl. Orci varius natoque penatibus et magnis dis parturient montes,
+                        nascetur ridiculus mus.</p>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+</div>   {% endcomment %}
+
+
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="col-md-12 about-team-r">
+            <div class="row align-items-center justify-content-center">
+              <div class="col-md-7">
+                <h3 class="h2 text-success"> <b>Sign In</b> <strong></strong></h3>
+                <p class="mb-4">If you have an account, sign in with your email address.</p>
+                <form method="post">
+                  {% csrf_token %}
+                  <div class="form-group first">
+                    <label for="username"> <b> Email </b> </label>
+                    <input type="text" class="form-control" placeholder="your-email@gmail.com" name="email" id="username" required>
+                  </div>
+                  <div class="form-group last mb-3">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" placeholder="Your Password" minlength="1" name="password" id="password" required>
+                  </div>
+                  <div class="d-flex mb-5 align-items-center">
+                    <label class="control control--checkbox mb-0"><span class="caption">Remember
+                        me</span>
+                      <input type="checkbox" checked="checked" />
+                      <div class="control__indicator"></div> 
+                    </label>
+                    <span class="ml-auto"><a href="#" class="forgot-pass">Forgot Password</a></span>
+                  </div>
+                  <input type="submit" value="Sign in" onclick="hash()" class="btn btn-block btn-success">
+                  {%include './messages.html'%}
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+       
+    </div>
+  </div>
+
+
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script>
+  <script>
+    function hash()
+    {
+      pass= document.getElementById("password").value;
+      var hash = CryptoJS.MD5(pass);
+      document.getElementById('password').value=hash;
+    }
+  </script>
+
+
+{% endblock content %}
